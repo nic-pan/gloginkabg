@@ -1,0 +1,44 @@
+# Uploads the site to https://gloginkabg.neocities.org on every push to main.
+# Needs the repo secret NEOCITIES_API_TOKEN (Neocities → Settings → API).
+
+name: Deploy to Neocities
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:   # also allows a manual run from the Actions tab
+
+concurrency:
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Copy only the site files. These stay on GitHub and are NOT uploaded:
+      # the Worker code, local dev config, and git files.
+      - name: Collect site files
+        run: |
+          rsync -a ./ _site/ \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '.gitignore' \
+            --exclude '.DS_Store' \
+            --exclude 'worker/' \
+            --exclude 'docker-compose.yml' \
+            --exclude 'serve.json' \
+            --exclude '_site/'
+          echo "Files to deploy:"
+          find _site -type f | sort
+
+      - name: Deploy
+        uses: bcomnes/deploy-to-neocities@v3.0.7
+        with:
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          dist_dir: _site
+          cleanup: false              # never delete files on Neocities
+          neocities_supporter: false  # free account: skip file types it rejects
+          preview_before_deploy: true # print the plan in the log

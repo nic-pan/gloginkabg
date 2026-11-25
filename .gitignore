@@ -9,3 +9,6 @@ worker/node_modules/
 # Local secrets, if any are ever added in the project
 .env
 .dev.vars
+
+# Build folder made by the deploy workflow
+_site/
