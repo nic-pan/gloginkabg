@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Последната глогинка</title>
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/video.css" />
+  <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+    <div class="container">
+      <include-html src="/layout/sidebar.html"></include-html>
+
+      <main class="bordered">
+        <include-html src="/layout/topbar.html"></include-html>
+
+        <div class="sectionHeader">
+          <span class="headerImg"></span>
+          <h2>Видео</h2>
+        </div>
+
+        <div class="video-list">
+
+          <div class="video-entry">
+            <div class="video-thumb-wrap">
+              <div class="video-play-btn"><a href="video/item.html">▶</a></div>
+              <a href="video/item.html">
+                <img src="https://img.youtube.com/vi/KMU0tzLwhbE/mqdefault.jpg" alt="Класика">
+              </a>
+            </div>
+            <div class="video-info-col">
+              <div class="video-title"><a href="video/item.html">Класика</a></div>
+              <div class="video-filename">youtube_classic.mp4</div>
+              <div class="video-date">30.05.26 14:00</div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="video-entry">
+            <div class="video-thumb-wrap">
+              <div class="video-play-btn"><a href="video/item.html">▶</a></div>
+              <div class="video-no-thumb">няма</div>
+            </div>
+            <div class="video-info-col">
+              <div class="video-title"><a href="video/item.html">Алисия, Карамел</a></div>
+              <div class="video-filename">alicia_karamel.mpg</div>
+              <div class="video-date">19.12.06 10:10</div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="video-entry">
+            <div class="video-thumb-wrap">
+              <div class="video-play-btn"><a href="video/item.html">▶</a></div>
+              <div class="video-no-thumb">няма</div>
+            </div>
+            <div class="video-info-col">
+              <div class="video-title"><a href="video/item.html">Ивана, Най-добрата</a></div>
+              <div class="video-filename">IVANA_NAI DOBRATA.MPG</div>
+              <div class="video-date">25.01.07 12:13</div>
+            </div>
+          </div>
+
+          <hr>
+
+        </div>
+      </main>
+    </div>
+    <include-html src="/layout/footer.html"></include-html>
+  </div>
+  <include-html src="/layout/adbox.html"></include-html>
+
+</body>
+
+</html>

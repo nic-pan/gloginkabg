@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Последната глогинка - Галерия</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+    <script src="script.js"></script>
+    <script src="gallery/gallery-data.js"></script>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+        <div class="container">
+            <include-html src="/layout/sidebar.html"></include-html>
+
+            <main>
+                <include-html src="/layout/topbar.html"></include-html>
+                <div class="sectionHeader">
+                    <span class="headerImg"></span>
+                    <h2>Галерия</h2>
+                </div>
+                <div class="gallery-sections"></div>
+            </main>
+        </div>
+        <include-html src="/layout/footer.html"></include-html>
+    </div>
+    <include-html src="/layout/adbox.html"></include-html>
+
+    <script>
+        const container = document.querySelector('.gallery-sections');
+        for (const [cat, category] of Object.entries(galleryData)) {
+            if (category.items.length === 0) continue;
+            const section = document.createElement('section');
+            section.innerHTML = `<h3 class="gallery-cat-title">${category.label}</h3>`;
+            const grid = document.createElement('div');
+            grid.className = 'items';
+            category.items.forEach((item, i) => {
+                const div = document.createElement('div');
+                div.className = 'gallery-item';
+                div.innerHTML = `<a href="gallery/item?cat=${cat}&id=${i}"><img src="${item.src}" alt="${item.title}"><p>${item.title}</p></a>`;
+                grid.appendChild(div);
+            });
+            section.appendChild(grid);
+            container.appendChild(section);
+        }
+    </script>
+</body>
+
+</html>

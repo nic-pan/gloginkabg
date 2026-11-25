@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Последната глогинка</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/news.css" />
+    <script src="../script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+        <div class="container">
+            <include-html src="/layout/sidebar.html"></include-html>
+
+            <main class="news">
+                <include-html src="/layout/topbar.html"></include-html>
+                <div class="sectionHeader">
+                    <span class="headerImg"></span>
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="news">Новини</a></li>
+                            <li>Категория</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="news-container">
+
+                </div>
+            </main>
+        </div>
+        <include-html src="/layout/footer.html"></include-html>
+    </div>
+    <include-html src="/layout/adbox.html"></include-html>
+
+    <script>
+        function renderNewsLinks(data) {
+            const container = document.getElementById('news-container');
+
+            const ul = document.createElement('ul');
+            ul.classList.add('news-list');
+
+                data.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <div class="news-item-row">
+                            <span class="news-date">${item.date}</span>
+                            <a class="news-title" href="${item.url}">${item.title}</a>
+                        </div>
+                    `;
+                    ul.appendChild(li);
+                });
+
+                container.appendChild(ul);
+
+        }
+        const newsLinks = [
+            {
+                date: "25 май 25",
+                title: 'Имаме новина',
+                url: "news/news.html"
+            }
+        ];
+        renderNewsLinks(newsLinks)
+    </script>
+</body>
+</html>

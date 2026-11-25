@@ -1,0 +1,396 @@
+{
+    "white": {
+      "colors": {
+        "--bg": "#ffffff",
+        "--contentBG": "#fff",
+        "--primary": "#000000",
+        "--secondary": "#3366cc",
+        "--accent": "#fff",
+        "--navLink": "#000",
+        "--navBG": "#fff",
+        "--accentText": "#000"
+      },
+      "header": {
+        "backgroundType": "solid",
+        "background": "#fff",
+        "textColor": "#000",
+        "borderBottom": false,
+        "rounded": false
+      },
+      "sectionHeader": {
+        "background": "#f0f0f0",
+        "icon": "📄"
+      }
+    },
+  
+    "candy": {
+      "colors": {
+        "--bg": "#DD77BB",
+        "--contentBG": "#fff",
+        "--primary": "#691B50",
+        "--secondary": "#BB2F8D",
+        "--accent": "#66CC33",
+        "--accent2": "#EBF9E3",
+        "--navLink": "#FFFF00",
+        "--navBG": "#BB2F8D",
+        "--navBorder": "#EE88BB",
+        "--navBullet": "#FFFF00",
+        "--listBullet": "\"𖦹\"",
+        "--commentsLinkColor": "#66CC33",
+        "--galleryTitle": "#66CC33",
+        "--footerBorderTop": "1px solid #FF9900",
+        "--footerBorderBottom": "1px solid #803B71",
+        "--footerFieldset": "#ffffff",
+        "--footerLegend": "#ffffff",
+        "--footerDisclaimer": "#ffffff",
+        "--headerBG": "#ec88ba",
+        "--commenterBG": "#66CC33",
+        "--comment": "#EBF9E3",
+        "--commentText": "#691B50"
+      },
+      "header": {
+        "backgroundType": "gradient",
+        "background": "linear-gradient(to bottom, #f8a7d0 10%, #ec8cbc 100%)",
+        "textColor": "#fff",
+        "borderBottom": "#66CC33",
+        "rounded": "bottom-right"
+      },
+      "sectionHeader": {
+        "background": "#66CC33",
+        "icon": "🍭"
+      },
+      "footer": {
+        "background": "#BB2F8D",
+        "color": "#FFFF00"
+      }
+    },
+
+    "garden": {
+      "colors": {
+        "--bg": "#85C13C",
+        "--contentBG": "#fff",
+        "--headerBG": "#f08cd0",
+        "--primary": "#D98ADB",
+        "--secondary": "#A673BB",
+        "--accent": "#FFFDD7",
+        "--accent2": "#F0F9E8",
+        "--timestamp": "#66952D",
+        "--navLink": "#FFF",
+        "--navBG": "#85C13C",
+        "--commenterBG": "#FFFDD7",
+        "--comment": "#F0F9E8",
+        "--commentText": "#A673BB",
+        "--accentText": "#66952D",
+        "--commenterText": "#A673BB",
+        "--borderColor": "transparent",
+        "--navBorder": "#FFD700",
+        "--listBullet": "\"★\"",
+        "--navBullet": "#FFD700",
+        "--calendarText": "#A673BB",
+        "--widgetTitle": "#A673BB",
+        "--footerBorderTop": "1px solid #ffffff",
+        "--footerFieldset": "#ffffff",
+        "--calendarBorder": "#C9E370",
+        "--calendarCell": "#f08cd0",
+        "--calendarDate": "#316C75",
+        "--calendarWeekdayBG": "#f08cd0",
+        "--calendarWeekdayColor": "#ffffff",
+        "--accent": "#CDE7AD"
+      },
+      "header": {
+        "backgroundType": "solid",
+        "background": "#f08cd0",
+        "textColor": "#fff",
+        "borderBottom": "#FFD700",
+        "rounded": false
+      },
+      "sectionHeader": {
+        "background": "#85C13C",
+        "icon": "🌸"
+      },
+      "footer": {
+        "background": "#D98ADB",
+        "color": "#ffffff"
+      }
+    },
+  
+    "skyBlue": {
+      "colors": {
+        "--bg": "#648cb4",
+        "--contentBG": "#EEF6FD",
+        "--headerBG": "#1B3B5D",
+        "--primary": "#204063",
+        "--secondary": "#3E76B1",
+        "--accent": "#ADD5F5",
+        "--accent2": "#EEF6FD",
+        "--navLink": "#fff",
+        "--navBG": "#3E76B1",
+        "--commenterBG": "#ADD5F5",
+        "--comment": "#EEF6FD",
+        "--commentText": "#3E76B1",
+        "--accentText": "#1B3B5D",
+        "--widgetTitle": "#D7EAFA",
+        "--calendarSectionBG": "#6192C7",
+        "--calendarBorder": "#61A2E8",
+        "--calendarText": "#ffffff",
+        "--calendarWeekdayBG": "#D7EAFA",
+        "--calendarWeekdayColor": "#316C75",
+        "--calendarMonthColor": "#316C75",
+        "--calendarCell": "#D7EAFA",
+        "--calendarDate": "#316C75",
+        "--navBorder": "#61A2E8",
+        "--sectionHeaderColor": "#3E76B1",
+        "--sectionHeaderBorder": "solid 1px #A7BFEA",
+        "--listBullet": "\"●\"",
+        "--listBulletSize": "11px",
+        "--navBullet": "#2596be",
+        "--footerFieldset": "#ffffff",
+        "--footerDisclaimer": "#8395B1"
+      },
+      "header": {
+        "backgroundType": "solid",
+        "background": "#1B3B5D",
+        "textColor": "#fff",
+        "borderBottom": true,
+        "rounded": true
+      },
+      "sectionHeader": {
+        "background": "#D7EAFA",
+        "icon": "☁️"
+      },
+      "footer": {
+        "background": "#17314D",
+        "color": "#ffffff"
+      }
+    },
+
+    "bloodOrange": {
+      "colors": {
+        "--bg": "#339900",
+        "--contentBG": "#FDF1E3",
+        "--primary": "#000000",
+        "--secondary": "#DF3A0B",
+        "--accent": "#FFC42C",
+        "--navBG": "#DF3A0B",
+        "--navLink": "#FFCB42",
+        "--accentText": "#000",
+        "--listBullet": "\"⧪\"",
+        "--navBullet": "#FFCB42",
+        "--navBorderStyle": "solid",
+        "--navBorder": "#ffffff",
+        "--topbarBG": "#3C5A12",
+        "--topbarLink": "#ffffff",
+        "--sectionHeaderBorderBottom": "1px solid #3C5A12",
+        "--calendarBorder": "#F79B2C",
+        "--calendarSectionBG": "#FFC42C",
+        "--calendarText": "#FFFF00",
+        "--calendarWeekdayBG": "#F79B2C",
+        "--calendarWeekdayColor": "#000000",
+        "--accentText": "#ffffff",
+        "--gloginBorder": "#F79B2C",
+        "--gloginTitle": "#FFCB42",
+        "--footerDisclaimer": "#FFCB42",
+        "--footerBorderTop": "1px solid #FFCB42",
+        "--footerBorderBottom": "1px solid #FFCB42",
+        "--footerFieldset": "#ffffff"
+      },
+      "header": {
+        "backgroundType": "gradient",
+        "background": "linear-gradient(to bottom, #fae5c6, #f89418)",
+        "textColor": "#fff",
+        "borderBottom": "#339900",
+        "rounded": "bottom-right"
+      },
+      "sectionHeader": {
+        "color": "#fff",
+        "background": "#339900",
+        "icon": "🍊"
+      },
+      "footer": {
+        "background": "#339900",
+        "color": "#ffffff"
+      }
+    },
+
+    "purpleDream": {
+      "colors": {
+        "--bg": "#59518C",
+        "--contentBG": "#F9F4FD",
+        "--primary": "#663399",
+        "--secondary": "#D26CAC",
+        "--accent": "#eee6ff",
+        "--accent2": "#D26CAC",
+        "--navBG": "#59518C",
+        "--navLink": "#fff",
+        "--accentText": "#663399",
+        "--listBullet": "\"⦿\"",
+        "--navBullet": "#D26CAC",
+        "--accent": "#766FAC",
+        "--calendarSectionBG": "#766FAC",
+        "--gloginBorder": "#4A4475",
+        "--calendarBorder": "#4A4475",
+        "--gloginTitle": "#ffffff",
+        "--widgetTitle": "#ffffff",
+        "--accentText": "#ffffff",
+        "--footerFieldset": "#ffffff",
+        "--footerLegend": "#ffffff",
+        "--footerDisclaimer": "#663399",
+        "--footerBorderTop": "1px solid #ffffff",
+        "--footerBorderBottom": "1px solid #ffffff",
+        "--topbarLink": "#663399",
+        "--commenterBG": "#E1D8F3",
+        "--comment": "#FBE3F2",
+        "--calendarWeekdayBG": "#59518C",
+        "--navBorder": "#715692",
+        "--asideBorder": "transparent",
+        "--borderColor": "transparent"
+      },
+      "header": {
+        "backgroundType": "solid",
+        "background": "#D26CAC",
+        "textColor": "#fff",
+        "borderBottom": "#2596be",
+        "rounded": "bottom-right"
+      },
+      "sectionHeader": {
+        "color": "#fff",
+        "background": "#D26CAC",
+        "icon": "💜"
+      },
+      "footer": {
+        "background": "#D26CAC",
+        "color": "#ffffff"
+      }
+    },
+  
+    "bordeaux": {
+      "colors": {
+        "--bg": "#937915",
+        "--contentBG": "#f8f8e8",
+        "--primary": "#666666",
+        "--secondary": "#EFDC92",
+        "--accent": "#FFFFCC",
+        "--accent2": "#FFFFEA",
+        "--navLink": "#fff",
+        "--navBG": "#4F0100",
+        "--commenterBG": "#FFFFCC",
+        "--comment": "#FFFFEA",
+        "--commentText": "#666",
+        "border": "dashed 1px #999999",
+        "--accentText": "#4F0100",
+        "--borderColor": "transparent",
+        "--listBullet": "\"○\"",
+        "--listBulletSize": "10px",
+        "--navBullet": "#FF6600",
+        "--sectionHeaderColor": "#B13000",
+        "--sectionHeaderBorderBottom": "2px solid #B13000",
+        "--navBorder": "#ADADA8",
+        "--navBorderStyle": "dashed",
+        "--entryTitle": "#000000",
+        "--linkColor": "#B13000",
+        "--commentBorder": "1px dashed #999999",
+        "--calendarSectionBG": "#000000",
+        "--widgetTitle": "#D7EAFA",
+        "--calendarCellBG": "#ffffff",
+        "--calendarDate": "#316C75",
+        "--calendarText": "#ffffff",
+        "--calendarWeekdayBG": "#000000",
+        "--calendarWeekdayColor": "#ffffff",
+        "--topbarLink": "#000000",
+        "--commentsLinkColor": "#B13000",
+        "--footerFieldset": "#ffffff"
+      },
+      "header": {
+        "backgroundType": "gradient",
+        "background": "repeating-linear-gradient(to bottom, rgba(0,0,0,0.18) 0px 1px, transparent 1px 5px), linear-gradient(to bottom, #2d0800 0%, #5f1e1c 18%, #4F0100 35%, #b03203 50%, #4F0100 65%, #5f1e1c 82%, #2d0800 100%)",
+        "textColor": "#fff",
+        "borderBottom": false,
+        "rounded": false
+      },
+      "sectionHeader": {
+        "background": "#EFDC92",
+        "icon": "🍷"
+      },
+      "footer": {
+        "background": "#B13000",
+        "color": "#ffffff"
+      }
+    },
+
+    "night": {
+      "colors": {
+        "--bg": "#3C3C3C",
+        "--contentBG": "#000",
+        "--headerBG": "#000",
+        "--primary": "#cccccc",
+        "--secondary": "#555555",
+        "--linkColor": "#5577cc",
+        "--navBullet": "red",
+        "--widgetTitle": "red",
+        "--topbarLink": "#777777",
+        "--accent": "#111",
+        "--accent2": "#111",
+        "--navLink": "#777777",
+        "--navBG": "#000",
+        "--commenterBG": "#111",
+        "--commenterText": "#ffffff",
+        "--comment": "#0a0a0a",
+        "--commentText": "#777777",
+        "--commentsLinkColor": "red",
+        "--timestamp": "#777777",
+        "--accentText": "#777777",
+        "--galleryNavLink": "red",
+        "--galleryTitle": "red",
+        "--sectionHeaderColor": "red",
+        "--entryTitle": "#ffffff",
+        "--calendarCell": "#555",
+        "--calendarDate": "#cccccc",
+        "--calendarWeekdayBG": "#222"
+      },
+      "header": {
+        "backgroundType": "solid",
+        "background": "#000",
+        "textColor": "#fff",
+        "borderBottom": false,
+        "rounded": false
+      },
+      "sectionHeader": {
+        "background": "transparent",
+        "icon": "🌙"
+      },
+      "footer": {
+        "background": "#000",
+        "color": "#ccc"
+      }
+    },
+  
+    "leaf": {
+      "colors": {
+        "--bg": "#A2BFB4",
+        "--contentBG": "#fff",
+        "--primary": "#002919",
+        "--secondary": "#002919",
+        "--accent": "#009157",
+        "--accent2": "#A90000",
+        "--navLink": "#002919",
+        "--navBG": "#EFF4F2"
+      },
+      "header": {
+        "backgroundType": "solid",
+        "background": "#002113",
+        "textColor": "#fff",
+        "borderBottom": true,
+        "rounded": "bottom-right"
+      },
+      "sectionHeader": {
+        "color": "#fff",
+        "background": "#009157",
+        "icon": "🍃"
+      },
+      "footer": {
+        "background": "#002919",
+        "color": "#fff"
+      }
+    }
+  }
+  

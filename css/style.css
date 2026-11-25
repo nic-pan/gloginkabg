@@ -1,0 +1,496 @@
+:root {
+  --bg: #fff;
+  --primary: #000;
+  --secondary: #777777;
+  --navLink: #000;
+  --navBG: #fff;
+  --headerBG: #000;
+  --accentText: #fff;
+  --calendarCell: #316C75;
+  --calendarWeekdayBG: #9E2778;
+  --listBullet: "➤";
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  /*      background: url('your-background.gif') repeat-y right top, #fff;*/
+  background: var(--bg);
+  color: var(--primary);
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--linkColor, var(--secondary));
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header h1 a {
+  font-size: 21px;
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  text-decoration: underline;
+}
+
+#page-wrapper {
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+}
+
+#rating {
+  color: var(--navLink);
+  font-size: 11px;
+  text-align: center;
+}
+
+#rating h4 {
+  margin: 4px 0;
+}
+
+#rating .thumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+#rating .thumbs span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Optional: Set SVG size and make sure there's no accidental margin */
+#rating .thumbs svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  fill: currentColor;
+}
+
+#rating .thumbs span {
+  cursor: pointer;
+}
+
+#calendar {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex; 
+  max-width: 960px;
+  /* margin: 0 auto; */
+}
+
+.bordered {
+  border: 1px solid var(--borderColor, var(--secondary));
+}
+
+.centered {
+  text-align: center;
+}
+
+
+aside {
+  max-width: 210px;
+  /* width: 160px; */
+  /*      padding: 10px;*/
+  padding-bottom: 60px;
+  background: var(--navBG);
+}
+
+aside>* {
+  border-bottom: var(--asideBorder, var(--navBorder, var(--secondary))) solid 1px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--contentBG);
+}
+
+.prebar {
+  background: var(--prebarBG, #1a1a1a);
+  color: var(--prebarText, #aaaaaa);
+  font-size: 10px;
+  padding: 3px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.prebar-sep {
+  opacity: 0.5;
+}
+
+header {
+  background-color: var(--headerBG);
+  padding: 10px;
+  border-bottom: 2px dashed var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+header img {
+  max-width: 100px;
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  font-size: 11px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+nav a:before {
+  content: var(--listBullet);
+  font-size: var(--listBulletSize, 8px);
+  color: var(--navBullet, var(--primary));
+  margin-right: 0.4em;
+}
+
+nav#mainNav a {
+  display: block;
+  padding: 10px;
+  color: var(--navLink);
+  border-bottom: var(--navBorder, var(--secondary)) 1px var(--navBorderStyle, dotted);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3px 16px;
+  margin: 8px 0 12px;
+  background: var(--topbarBG, transparent);
+}
+
+.topBar a {
+  color: var(--topbarLink, var(--secondary));
+}
+
+nav#additional {
+  margin: 10px 0 15px;
+}
+
+.gloginki-section {
+  background: var(--accent);
+  border: 1px var(--gloginBorder, var(--secondary)) solid;
+  padding: 6px 8px;
+  margin: 16px 8px;
+  font-size: 11px;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.gloginki-title {
+  font-weight: bold;
+  font-size: 12px;
+  color: var(--gloginTitle, var(--widgetTitle, var(--accentText)));
+  margin-bottom: 4px;
+}
+
+.gloginki-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.gloginki-list li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.gloginki-list li::before {
+  content: var(--listBullet);
+  font-size: var(--listBulletSize, 8px);
+  color: var(--navBullet, var(--primary));
+  flex-shrink: 0;
+}
+
+.gloginki-list a {
+  color: var(--accentText);
+  text-decoration: none;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gloginki-list a:hover {
+  text-decoration: underline;
+}
+
+.gloginki-more {
+  text-align: right;
+  margin-top: 4px;
+}
+
+.gloginki-more a {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--gloginTitle, var(--widgetTitle, var(--accentText)));
+  text-decoration: underline;
+}
+
+.calendar-section {
+  border: 1px solid var(--calendarBorder, var(--calendarCell));
+  background-color: var(--calendarSectionBG, var(--accent));
+  padding-bottom: 8px;
+}
+.calendar-section h3 {
+  color: var(--widgetTitle, var(--accentText));
+  margin-top: 0;
+}
+
+#calendar {
+  font-size: 11px;
+  color: var(--calendarText, var(--navLink));
+}
+
+#calendar button {
+  padding: 2px 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--calendarText, var(--primary));
+}
+
+#calendar table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#calendar thead tr.month th {
+  text-transform: lowercase;
+  color: var(--calendarMonthColor, var(--calendarText, var(--navLink)));
+}
+
+#calendar thead tr.month th button {
+  color: var(--calendarMonthColor, var(--calendarText, var(--primary)));
+}
+
+#calendar table td {
+  border: 1px solid var(--calendarCell);
+  background-color: var(--calendarCellBG, var(--contentBG, white));
+  color: var(--calendarDate, var(--calendarCell));
+}
+
+#calendar thead tr.weekdays th {
+  background-color: var(--calendarWeekdayBG);
+  color: var(--calendarWeekdayColor, var(--accentText));
+}
+
+#calendar td.today {
+  /* background: var(--accent, #f2b); */
+  color: red;
+  font-weight: bold;
+}
+
+#calendar-main {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--calendarText, var(--navLink));
+}
+
+#calendar-main button {
+  padding: 2px 8px;
+  background: var(--calendarSectionBG, var(--accent));
+  border: 1px solid var(--calendarBorder, var(--calendarCell));
+  cursor: pointer;
+  color: var(--calendarText, var(--primary));
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+#calendar-main button:hover {
+  background: var(--calendarText, var(--primary));
+  color: var(--calendarSectionBG, var(--bg));
+}
+
+#calendar-main table {
+  border-collapse: collapse;
+}
+
+#calendar-main table td {
+  border: 1px solid var(--calendarCell);
+  background-color: var(--calendarCellBG, var(--contentBG, white));
+  color: var(--calendarDate, var(--calendarCell));
+  padding: 4px 10px;
+  text-align: center;
+}
+
+#calendar-main thead tr.weekdays th {
+  background-color: var(--calendarWeekdayBG);
+  color: var(--calendarWeekdayColor, var(--accentText));
+  padding: 4px 10px;
+}
+
+#calendar-main td.today {
+  color: red;
+  font-weight: bold;
+}
+
+#calendar-main thead tr.month th {
+  padding: 4px 0;
+  text-transform: lowercase;
+  color: var(--calendarMonthColor, var(--calendarText, var(--navLink)));
+}
+
+#calendar-main thead tr.month th button {
+  color: var(--calendarMonthColor, var(--calendarText, var(--primary)));
+}
+
+footer .visit-stats {
+  width: 33%;
+}
+
+footer fieldset {
+  border-color: var(--footerFieldset, var(--secondary));
+}
+
+footer legend {
+  color: var(--footerLegend, inherit);
+}
+
+.disclaimer {
+  color: var(--footerDisclaimer, inherit);
+}
+
+.footer-info {
+  padding: 0 20px;
+}
+
+footer small {
+  font-size: 10px;
+}
+
+footer {
+  font-size: 12px;
+  padding: 10px;
+  background-color: var(--bg);
+  border-top: var(--footerBorderTop, 2px dotted var(--secondary));
+  border-bottom: var(--footerBorderBottom, none);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  /* color: var(--navLink); */
+}
+.visit-stats {
+  width: 260px ;
+}
+.ad-box {
+  position: absolute;
+  top: 39px;
+  left: 960px;
+  width: 230px;
+  height: 240px;
+  z-index: 1;
+  background-color: var(--accent2);
+  border: 2px solid var(--accent);
+
+  font-size: 12px;
+  padding: 10px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  padding: 0 3.5px;
+  margin: 0 0 10px 0;
+  background: var(--sectionHeaderBG, #1a1a1a);
+  color: var(--sectionHeaderColor, #fff);
+  border: var(--sectionHeaderBorder, none);
+  border-bottom: var(--sectionHeaderBorderBottom, var(--sectionHeaderBorder, none));
+}
+
+.headerImg {
+  font-size: 1.5em;
+  margin-right: 8px;
+}
+
+.sectionHeader h2 {
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+.go-back {
+  margin-left: 26px;
+  line-height: 30px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.centered {
+  text-align: center;
+}
+
+div.centered,
+section.centered,
+article.centered,
+header.centered,
+footer.centered,
+aside.centered,
+main.centered,
+nav.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.underlined {
+  text-decoration: underline;
+}
+a.underlined:hover {
+  text-decoration: none;
+}
+
+
+.breadcrumbs ul {
+  list-style: none;
+  padding: 0;
+}
+.breadcrumbs li {
+  font-size: 15px;
+  display: inline;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: " / "
+}
+.breadcrumbs a {
+  font-weight: bold;
+  text-decoration: none;
+}

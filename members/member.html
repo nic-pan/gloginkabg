@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Последната глогинка</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/members.css" />
+    <script src="../script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+        <div class="container">
+            <include-html src="/layout/sidebar.html"></include-html>
+
+            <main class="members">
+                <include-html src="/layout/topbar.html"></include-html>
+                <div class="sectionHeader">
+                    <span class="headerImg"></span>
+                    <h2>Членове</h2>
+                </div>
+                <div id="member-card">
+                    <p><label>Рождена дата:</label>20.05.1999</p>
+                    <p><label>E-mail:</label>a.nonee.mousse@notamail.com</p>
+                    <p><label>Интереси:</label>Сърфиране в Интернет, писане на код</p>
+                </div>
+            </main>
+        </div>
+        <include-html src="/layout/footer.html"></include-html>
+    </div>
+    <include-html src="/layout/adbox.html"></include-html>
+
+    <script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+  }
+  
+#link-items {
+    margin-top: 16px;
+  }
+
+  
+  .link-icon img {
+    width: 13px;
+    height: auto;
+    margin-top: 3px;
+  }
+  
+  .link-title {
+    font-weight: bold;
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  
+  .link-title:hover {
+    text-decoration: underline;
+  }
+  
+  .link-url a {
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .link-url a:hover {
+    text-decoration: underline;
+  }
+  

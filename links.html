@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Последната глогинка</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/links.css" />
+    <script src="../script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+        <div class="container">
+            <include-html src="/layout/sidebar.html"></include-html>
+
+            <main class="links">
+                <include-html src="/layout/topbar.html"></include-html>
+                <div class="sectionHeader">
+                    <span class="headerImg"></span>
+                    <h2>Линкове</h2>
+                </div>
+                <div id="link-items">
+
+                </div>
+            </main>
+        </div>
+        <include-html src="/layout/footer.html"></include-html>
+    </div>
+    <include-html src="/layout/adbox.html"></include-html>
+</body>
+
+<script>
+    const links = [
+        {url: 'https://web.archive.org/web/20070618035500/http://glog.dir.bg/ui/about.php', description: 'Какво е Глог?'},
+        {url: 'https://dir.bg', description: 'Dir.bg - Българският Интернет портал!'}
+    ]
+
+    links.forEach(link => {
+        const html = `<div class="item">
+                    <a href="${link.url}" target="_blank" class="link-icon">
+                        <img src="/web/20080609222519im_/http://h2o-just-add-water-the-best.dir.bg/_wm/statics/pink_img_1/bullet_5.gif"
+                            alt="*" />
+                    </a>
+                    <div class="link-description">
+                        <a href="${link.url}" target="_blank" class="link-title underlined">
+                            <b>${link.description}</b>
+                        </a>
+                        <div class="link-url">
+                            <a href="${link.url}" target="_blank">
+                                (${link.url})
+                            </a>
+                        </div>
+                    </div>
+                </div>`;
+                appendHTMLString(document.getElementById('link-items'), html);
+            });
+
+</script>
+
+</html>
+

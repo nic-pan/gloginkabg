@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Node / Wrangler (Cloudflare Worker)
+node_modules/
+worker/.wrangler/
+worker/node_modules/
+
+# Local secrets, if any are ever added in the project
+.env
+.dev.vars

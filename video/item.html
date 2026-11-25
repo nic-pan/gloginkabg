@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Последната глогинка</title>
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/video.css" />
+  <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+    <div class="container">
+      <include-html src="/layout/sidebar.html"></include-html>
+
+      <main class="bordered">
+        <include-html src="/layout/topbar.html"></include-html>
+
+        <div class="sectionHeader">
+          <span class="headerImg"></span>
+          <h2>Видео</h2>
+        </div>
+
+        <a class="go-back" href="video">« Обратно</a>
+
+        <div class="video-player">
+          <iframe
+            src="https://www.youtube.com/embed/KMU0tzLwhbE"
+            title="YouTube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-meta">
+          <strong>Класика</strong> &nbsp;·&nbsp; youtube_classic.mp4 &nbsp;·&nbsp; 30.05.26 14:00
+        </div>
+
+      </main>
+    </div>
+    <include-html src="/layout/footer.html"></include-html>
+  </div>
+  <include-html src="/layout/adbox.html"></include-html>
+
+</body>
+
+</html>

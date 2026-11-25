@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Последната глогинка</title>
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+    <div class="container">
+      <include-html src="/layout/sidebar.html"></include-html>
+
+      <main class="bordered">
+        <include-html src="/layout/topbar.html"></include-html>
+
+        <div class="sectionHeader">
+          <span class="headerImg"></span>
+          <h2>Минута мълчание</h2>
+        </div>
+
+        <div style="display:flex; justify-content:center; padding: 1rem;">
+          <img src="assets/img/dirbg_shutdown.png" alt="Услугата не се поддържа. Всички страници, създадени с конструктора на сайтове Glog, бяха деактивирани на 1 януари 2022 г." style="max-width:100%; height:auto;">
+        </div>
+
+      </main>
+    </div>
+    <include-html src="/layout/footer.html"></include-html>
+  </div>
+  <include-html src="/layout/adbox.html"></include-html>
+
+</body>
+
+</html>

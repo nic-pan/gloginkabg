@@ -1,0 +1,17 @@
+#member-card label {
+    font-weight: bold;
+}
+#member-card label::after {
+    content: " "
+}
+
+.members-list {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+.members-list li {
+    padding: 2px 0;
+    font-size: 13px;
+}

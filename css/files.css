@@ -1,0 +1,110 @@
+/* ── password gate ── */
+.password-gate {
+  padding: 0.75rem 1rem;
+}
+
+.password-gate hr {
+  border: none;
+  border-top: 1px solid var(--border-color, #ccc);
+  margin: 0.5rem 0 1.25rem;
+}
+
+.gate-hint {
+  font-size: 13px;
+  margin: 0 0 0.4rem;
+}
+
+.gate-msg {
+  color: #cc0000;
+  font-size: 14px;
+  margin: 0 0 0.75rem;
+}
+
+.gate-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 13px;
+}
+
+.gate-form input[type="text"] {
+  font-size: 13px;
+  padding: 2px 4px;
+  border: 1px solid #999;
+  width: 160px;
+}
+
+.gate-form button {
+  font-size: 12px;
+  padding: 2px 10px;
+  background: #e0e0e0;
+  border: 1px solid #999;
+  border-right-color: #444;
+  border-bottom-color: #444;
+  cursor: pointer;
+}
+
+.gate-form button:active {
+  border-color: #444;
+  border-right-color: #999;
+  border-bottom-color: #999;
+}
+
+.gate-error {
+  color: #cc0000;
+  font-size: 12px;
+  margin: 0.5rem 0 0;
+  min-height: 1em;
+}
+
+/* ── file list (revealed after login) ── */
+.file-list {
+  padding: 0.5rem 0;
+}
+
+.file-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.file-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+
+.file-info { flex: 1; }
+
+.file-name {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.file-meta {
+  font-size: 11px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.file-content {
+  display: none;
+  margin-top: 0.75rem;
+  background: #111;
+  color: #ccc;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  padding: 0.75rem 1rem;
+  white-space: pre-wrap;
+  border: 1px solid #444;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.file-download {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 12px;
+}

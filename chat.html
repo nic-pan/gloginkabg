@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Последната глогинка - Чатче</title>
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+    <div class="container">
+      <include-html src="/layout/sidebar.html"></include-html>
+
+      <main class="bordered">
+        <include-html src="/layout/topbar.html"></include-html>
+
+        <div class="sectionHeader">
+          <span class="headerImg"></span>
+          <h2>Чатче</h2>
+        </div>
+
+        <article class="centered">
+          <p><button type="button" id="chatToggle" class="uppercase">🔇 Спри чата и радиото</button></p>
+          <p id="chatOff" hidden><em>Чатът и радиото са спрени. Натисни бутона, за да ги пуснеш пак.</em></p>
+          <iframe id="chatFrame" data-src="https://xat.com/embed/chat.php#id=220535748&gn=gloginkitenabg" allow="clipboard-write" width="540" height="405" frameborder="0" scrolling="no"></iframe>
+          <br>
+          <small>
+            <a target="_BLANK" href="https://xat.com/web_gear/chat/embed.php?id=220535748&GroupName=gloginkitenabg">Get gloginkitenabg chat group</a>
+            |
+            <a target="_BLANK" href="https://xat.com/gloginkitenabg">Go to gloginkitenabg website</a>
+          </small>
+        </article>
+      </main>
+    </div>
+    <include-html src="/layout/footer.html"></include-html>
+  </div>
+  <include-html src="/layout/adbox.html"></include-html>
+
+</body>
+
+</html>

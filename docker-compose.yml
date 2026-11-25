@@ -1,0 +1,29 @@
+services:
+  web:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    # Local preview: http://localhost:3100
+    # Port 3000 is often taken by other projects. To use another port:
+    #   GLOG_PORT=3200 docker compose up web
+    ports:
+      - "${GLOG_PORT:-3100}:3000"
+    command: npx serve -l 3000 -c serve.json .
+
+  # Cloudflare CLI for the comments/counter Worker.
+  # Run it with: docker compose run --rm wrangler <command>
+  # The "tools" profile keeps it from starting with "docker compose up".
+  wrangler:
+    image: node:20-alpine
+    profiles: ["tools"]
+    working_dir: /app/worker
+    volumes:
+      - .:/app
+      - wrangler-cache:/root/.npm
+    env_file:
+      - ${HOME}/.config/gloginkabg/cloudflare.env
+    entrypoint: ["npx", "--yes", "wrangler@4"]
+
+volumes:
+  wrangler-cache:

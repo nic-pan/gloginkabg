@@ -1,0 +1,231 @@
+main.diary .diary-image img {
+    width: 50px;
+    height: 50px;
+}
+
+main.diary .comments {
+    margin: 0 auto;
+}
+
+main.diary .diary-entry {
+    border-bottom: 3px solid var(--secondary)
+}
+
+/* Diary preview */
+.diary-entry {
+    padding: 8px;
+}
+
+.diary-content {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.diary-image img {
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.diary-title {
+    margin: 0 0 4px;
+    color: var(--entryTitle, var(--primary));
+}
+
+.entry h3,
+.entry h4,
+.diary-title a {
+    color: var(--entryTitle, var(--primary));
+}
+
+.diary-description {
+    margin: 0 0 8px;
+    padding-bottom: 7px;
+}
+
+.diary-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7px;
+}
+
+.diary-footer .icon {
+    vertical-align: middle;
+    height: 14px;
+}
+
+.comments-link {
+    color: var(--commentsLinkColor, var(--secondary));
+}
+
+.comments-link span a {
+    text-decoration: underline;
+    margin-left: 4px;
+}
+
+.comments-link span:hover {
+    text-decoration: none;
+}
+
+.comments {
+    max-width: 600px;
+    margin-bottom: 4px;
+}
+
+.comment {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+    color: var(--commentText)
+}
+
+.comment>div {
+    padding: 4px;
+}
+
+.comment p {
+    margin: 0.5em 0;
+    line-height: 1.6;
+}
+
+.comment a {
+    color: var(--linkColor, var(--secondary));
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 0.3em;
+}
+
+.diary-footer time {
+    color: var(--timestamp)
+}
+
+.comment a:hover {
+    text-decoration: underline;
+}
+
+.commenter {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--commenterBG);
+    color: var(--commenterText, var(--primary));
+    padding: 4px;
+    width: 120px;
+    border: var(--commentBorder, none);
+}
+
+.commenter * {
+    display: block;
+}
+
+.commentContent {
+    width: 460px;
+    background-color: var(--comment);
+    border: var(--commentBorder, none);
+}
+
+/* Diary Entry */
+.comment-rules {
+    margin: 30px
+}
+
+.add-new-comment {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.add-new-comment h4 {
+    text-align: left;
+    padding-left: 0;
+}
+
+.add-new-comment .captcha {
+    justify-content: center;
+}
+
+.form-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.form-row label {
+    width: 155px;
+    text-align: right;
+    padding-right: 8px;
+    padding-top: 3px;
+}
+
+.form-row input,
+.form-row textarea {
+    flex: 1;
+    padding: 4px;
+}
+
+.form-row img {
+    width: 100px;
+    /* or whatever fits */
+    margin-right: 12px;
+}
+
+.form-row p {
+    flex: 1;
+    margin: 0;
+    padding-top: 4px;
+}
+
+.formi {
+    width: 142px;
+    height: 20px;
+}
+
+.invisible {
+    visibility: hidden;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#addComment {
+    font-size: 10px;
+    font-family: Verdana;
+    font-weight: bold;
+    border: 1px solid var(--accent);
+    color: var(--accent2);
+    background-color: var(--accent);
+    width: 142px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+main.diary-entry section.comments {
+    border: solid 1px var(--secondary);
+    padding: 15px;
+    margin: 0 auto;
+}
+
+main.diary-entry section.comments h3 {
+    margin-bottom: 30px;
+}
+/* Live comments (see initComments in script.js) */
+.commentContent {
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+/* Honeypot field: off-screen for people, visible to bots. */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-message {
+    min-height: 1.2em;
+    font-weight: bold;
+}

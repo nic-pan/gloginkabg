@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Последната глогинка</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/members.css" />
+    <script src="../script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+        <div class="container">
+            <include-html src="/layout/sidebar.html"></include-html>
+
+            <main class="members">
+                <include-html src="/layout/topbar.html"></include-html>
+                <div class="sectionHeader">
+                    <span class="headerImg"></span>
+                    <h2>Глогинки</h2>
+                </div>
+                <div id="members-container">
+                </div>
+            </main>
+        </div>
+        <include-html src="/layout/footer.html"></include-html>
+    </div>
+    <include-html src="/layout/adbox.html"></include-html>
+
+    <script>
+        function renderMembers(members) {
+            const container = document.getElementById('members-container');
+
+            const ul = document.createElement('ul');
+            ul.classList.add('members-list');
+
+                members.forEach(item => {
+                    const a = document.createElement('a');
+                    a.href = item.url;
+                    a.classList.add('underlined')
+                    a.innerHTML = item.title;
+                    const li = document.createElement('li');
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                });
+
+                container.appendChild(ul);
+
+        }
+        const members = [
+            { url: 'members/member.html', title: 'Последната Глогинка' },
+            { url: 'https://web.archive.org/web/20200226004519/http://gerganaworld.dir.bg/_wm/diary/?df=46&dflid=3', title: 'Сайт на Гергана!' },
+            { url: 'https://web.archive.org/web/20070622000330/http://cristiano--ronaldo.dir.bg/_wm/library/?df=271997', title: '^^CuTe_-_SiTe^^' },
+            { url: 'https://web.archive.org/web/20071013204554/http://supersite.dir.bg', title: 'ЗДРАВЕЙТЕ В НАЙ-ФЕНСКИЯ САЙТ В БЪЛГАРИЯ !' },
+            { url: 'https://web.archive.org/web/20210120192414/http://tokiohotel-fan.dir.bg/', title: 'За истинските фенове на Токио Хотел!' },
+            { url: 'https://web.archive.org/web/20070713045205/http://spomenche.dir.bg', title: 'spomenche.dir.bg' },
+        ]
+        renderMembers(members)
+    </script>
+</body>
+</html>

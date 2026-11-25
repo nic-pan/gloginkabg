@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Последната глогинка</title>
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/mp3.css" />
+  <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+    <div class="container">
+      <include-html src="/layout/sidebar.html"></include-html>
+
+      <main class="bordered mp3-page">
+        <include-html src="/layout/topbar.html"></include-html>
+
+        <div class="sectionHeader">
+          <span class="headerImg"></span>
+          <h2>Плейлист</h2>
+        </div>
+
+        <div class="winamp">
+          <div class="winamp-titlebar">
+            <span>Winamp</span>
+            <span>[ плейлист ]</span>
+          </div>
+
+          <div class="winamp-display">
+            <div class="now-playing-label">&gt;&gt;&gt; сега свири &lt;&lt;&lt;</div>
+            <div class="track-title"><span id="trackTitle">—</span></div>
+            <div class="track-time"><span id="trackTime">0:00</span> / <span id="trackTotal">0:00</span></div>
+          </div>
+
+          <div class="winamp-vis-header">
+            <span>визуализация</span>
+            <span id="playerStatus"></span>
+          </div>
+          <div class="winamp-vis" id="vis">
+            <button type="button" class="vis-start" id="visStart" onclick="togglePlay()" title="Пусни">
+              <img id="visThumb" alt="">
+              <span class="vis-play">▶</span>
+            </button>
+            <div id="ytPlayer"></div>
+          </div>
+
+          <div class="winamp-controls">
+            <button onclick="prevTrack()" title="Предишна">⏮</button>
+            <button onclick="togglePlay()" id="playBtn" title="Пусни / Пауза">▶</button>
+            <button onclick="stopTrack()" title="Стоп">⏹</button>
+            <button onclick="nextTrack()" title="Следваща">⏭</button>
+          </div>
+
+          <div class="winamp-playlist-header">
+            <span>плейлист</span>
+            <span id="trackCount"></span>
+          </div>
+          <div class="winamp-playlist" id="playlist"></div>
+        </div>
+
+        <!-- Spotify: replace the <span> with a link when the playlist is ready:
+             <a href="https://open.spotify.com/playlist/..." target="_blank" rel="noopener">🎧 Целият плейлист в Spotify</a> -->
+        <p class="spotify-link centered">
+          <span>🎧 Плейлистът в Spotify – очаквайте скоро</span>
+        </p>
+        <div>
+          <a href="https://www.glitter-graphics.com"><img src="http://dl9.glitter-graphics.net/pub/677/677839p0yi9kuib0.gif" width=249 height=246 border=0></a>
+          <a href="https://www.glitter-graphics.com"><img src="http://dl4.glitter-graphics.net/pub/194/194904olsgis3xqe.gif" width=110 height=100 border=0></a>
+          <a href="https://www.glitter-graphics.com"><img src="http://dl7.glitter-graphics.net/pub/517/517117grkpbyjcvm.gif" width=40 height=40 border=0></a>
+          <a href="https://www.glitter-graphics.com"><img src="http://dl5.glitter-graphics.net/pub/285/285095rsr7de4t83.gif" width=128 height=128 border=0></a>
+          <a href="https://www.glitter-graphics.com"><img src="http://dl9.glitter-graphics.net/pub/517/517049zmdkjrcqj5.gif" width=128 height=79 border=0></a>
+<a href="https://www.glitter-graphics.com"><img src="http://dl3.glitter-graphics.net/pub/890/890483qivc3d4yhi.gif" width=100 height=120 border=0></a>        </div>
+      </main>
+    </div>
+    <include-html src="/layout/footer.html"></include-html>
+  </div>
+  <include-html src="/layout/adbox.html"></include-html>
+
+  <script>
+    // Each song plays from YouTube. "duration" is only for the playlist list;
+    // the display shows the real time from the player.
+    const tracks = [
+      { artist: "Tokio Hotel",       title: "Durch den Monsun",  duration: "3:26", youtube: "S_Sy5-sOodA" },
+      { artist: "Evanescence",       title: "My Immortal",       duration: "4:30", youtube: "5anLPw0Efmo" },
+      { artist: "Within Temptation", title: "Ice Queen",         duration: "4:23", youtube: "lWNOLqs1IPQ" },
+      { artist: "Linkin Park",       title: "Numb",              duration: "3:07", youtube: "kXYiU_JCYtU" },
+      { artist: "Rammstein",         title: "Du Hast",           duration: "3:55", youtube: "W3q8Od5qJio" },
+      { artist: "Nightwish",         title: "Nemo",              duration: "4:05", youtube: "rNg2Dh6gPkw" },
+    ];
+
+    let current = 0;
+    let player = null;       // YT.Player, created on the first play
+    let playerReady = false;
+    let pendingPlay = false; // play as soon as the player is ready
+    let ticker = null;
+    let failedInRow = 0;     // songs that failed one after another
+
+    function formatTime(s) {
+      s = Math.max(0, Math.floor(s || 0));
+      return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+    }
+
+    function setStatus(text) {
+      document.getElementById('playerStatus').textContent = text;
+    }
+
+    function renderPlaylist() {
+      const list = document.getElementById('playlist');
+      list.replaceChildren(...tracks.map((t, i) => {
+        const row = document.createElement('div');
+        row.className = 'track' + (i === current ? ' active' : '');
+        row.onclick = () => selectTrack(i);
+        row.innerHTML = '<span class="track-num"></span><span class="track-info"></span><span class="track-duration"></span>';
+        row.children[0].textContent = `${i + 1}.`;
+        row.children[1].textContent = `${t.artist} - ${t.title}`;
+        row.children[2].textContent = t.duration;
+        return row;
+      }));
+      document.getElementById('trackCount').textContent = `${tracks.length} песни`;
+    }
+
+    function updateDisplay() {
+      const t = tracks[current];
+      document.getElementById('trackTitle').textContent = `${t.artist} - ${t.title}`;
+      const now = playerReady ? player.getCurrentTime() : 0;
+      const total = playerReady && player.getDuration() ? formatTime(player.getDuration()) : t.duration;
+      document.getElementById('trackTime').textContent = formatTime(now);
+      document.getElementById('trackTotal').textContent = total;
+      document.getElementById('visThumb').src = `https://img.youtube.com/vi/${t.youtube}/mqdefault.jpg`;
+    }
+
+    // ---------- YouTube player ----------
+
+    function loadYouTube() {
+      if (window.YT || document.getElementById('ytApi')) return;
+      setStatus('зареждане...');
+      window.onYouTubeIframeAPIReady = createPlayer;
+      const tag = document.createElement('script');
+      tag.id = 'ytApi';
+      tag.src = 'https://www.youtube.com/iframe_api';
+      tag.onerror = () => setStatus('YouTube не отговаря');
+      document.head.appendChild(tag);
+    }
+
+    function createPlayer() {
+      player = new YT.Player('ytPlayer', {
+        host: 'https://www.youtube-nocookie.com',
+        width: 288,
+        height: 200,
+        videoId: tracks[current].youtube,
+        playerVars: { autoplay: pendingPlay ? 1 : 0, controls: 0, modestbranding: 1, rel: 0, playsinline: 1 },
+        events: {
+          onReady: () => {
+            playerReady = true;
+            document.getElementById('visStart').hidden = true;
+            if (pendingPlay) player.playVideo();
+            pendingPlay = false;
+            clearInterval(ticker);
+            ticker = setInterval(updateDisplay, 500);
+          },
+          onStateChange: (e) => {
+            const playing = e.data === YT.PlayerState.PLAYING;
+            if (playing) failedInRow = 0;
+            document.getElementById('playBtn').textContent = playing ? '⏸' : '▶';
+            setStatus(playing ? 'свири' : e.data === YT.PlayerState.BUFFERING ? 'зареждане...' : '');
+            if (e.data === YT.PlayerState.ENDED) nextTrack(true);
+          },
+          onError: () => {
+            // 100 = removed, 101/150 = embedding not allowed. Skip the song,
+            // but stop after one full round so the player does not loop.
+            failedInRow++;
+            if (failedInRow >= tracks.length) {
+              setStatus('YouTube не позволява пускане тук');
+              failedInRow = 0;
+              return;
+            }
+            setStatus('песента не може да се пусне');
+            setTimeout(() => nextTrack(true), 1500);
+          },
+        },
+      });
+    }
+
+    function isPlaying() {
+      return playerReady && player.getPlayerState() === YT.PlayerState.PLAYING;
+    }
+
+    // Load the current song. Play it if "play" is true, else only cue it.
+    function loadCurrent(play) {
+      renderPlaylist();
+      updateDisplay();
+      if (playerReady) {
+        play ? player.loadVideoById(tracks[current].youtube)
+             : player.cueVideoById(tracks[current].youtube);
+      } else if (play) {
+        pendingPlay = true;
+        if (player) return;   // the player is still starting
+        loadYouTube();
+      }
+    }
+
+    // ---------- buttons ----------
+
+    function selectTrack(i) {
+      current = i;
+      loadCurrent(true);
+    }
+
+    function togglePlay() {
+      if (!playerReady) { loadCurrent(true); return; }
+      isPlaying() ? player.pauseVideo() : player.playVideo();
+    }
+
+    function stopTrack() {
+      if (!playerReady) return;
+      player.pauseVideo();
+      player.seekTo(0, true);
+      updateDisplay();
+    }
+
+    function prevTrack() {
+      current = (current - 1 + tracks.length) % tracks.length;
+      loadCurrent(isPlaying());
+    }
+
+    function nextTrack(autoplay = false) {
+      current = (current + 1) % tracks.length;
+      loadCurrent(autoplay === true || isPlaying());
+    }
+
+    renderPlaylist();
+    updateDisplay();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Последната глогинка - Галерия</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+    <script src="script.js"></script>
+    <script src="gallery/gallery-data.js"></script>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+        <div class="container">
+            <include-html src="/layout/sidebar.html"></include-html>
+
+            <main>
+                <include-html src="/layout/topbar.html"></include-html>
+                <div class="sectionHeader">
+                    <span class="headerImg"></span>
+                    <h2>Галерия</h2>
+                </div>
+                <div id="gallery-view"></div>
+            </main>
+        </div>
+        <include-html src="/layout/footer.html"></include-html>
+    </div>
+    <include-html src="/layout/adbox.html"></include-html>
+
+    <script>
+        const params = new URLSearchParams(location.search);
+        const cat = params.get('cat');
+        const id = parseInt(params.get('id'), 10);
+
+        const view = document.getElementById('gallery-view');
+
+        if (!cat || isNaN(id)) {
+            location.replace('/gallery/');
+        }
+
+        const category = (typeof galleryData !== 'undefined') ? galleryData[cat] : null;
+        const item = category ? category.items[id] : null;
+
+        if (!item) {
+            view.innerHTML = '<p style="padding:12px">Снимката не е намерена. <a href="/gallery/">← Галерия</a></p>';
+        } else {
+            const prev = id > 0
+                ? `<a href="/gallery/item?cat=${cat}&id=${id - 1}">← Предишна</a>`
+                : `<span class="nav-disabled">← Предишна</span>`;
+            const next = id < category.items.length - 1
+                ? `<a href="/gallery/item?cat=${cat}&id=${id + 1}">Следваща →</a>`
+                : `<span class="nav-disabled">Следваща →</span>`;
+
+            view.innerHTML = `
+                <div class="gallery-nav">
+                    <a href="gallery/">← Галерия</a>
+                    <span class="gallery-nav-sep">|</span>
+                    <span class="gallery-nav-arrows">${prev}<span class="gallery-nav-sep">|</span>${next}</span>
+                </div>
+                <div class="gallery-full bordered">
+                    <img src="${item.src}" alt="${item.title}">
+                    <p>${item.title}</p>
+                </div>`;
+        }
+    </script>
+</body>
+
+</html>
