@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Последната глогинка</title>
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <link rel="stylesheet" type="text/css" href="../css/diary.css" />
+  <script src="../script.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+    <div class="container">
+      <include-html src="/layout/sidebar.html"></include-html>
+
+      <main class="bordered diary-entry">
+        <include-html src="/layout/topbar.html"></include-html>
+
+      <div class="sectionHeader">
+        <span class="headerImg"></span>
+        <h2>Начало 15:43</h2>
+      </div>
+      <a class="go-back" href="../index.html">« Обратно</a>
+
+      <article class="diary-entry">
+          
+        <div class="diary-content">
+          <div class="diary-details">
+            <div class="diary-header">
+              <h3 class="diary-title">
+                <a href="diary/entry-2.html">
+                  Искаш ли да си в Глогинки?
+                </a>
+              </h3>
+              <div class="diary-description">
+                Ако искаш твоят глог, сайт или профил да е в списъка с Глогинки, остави коментар тук.
+                Напиши името, което да покажа, и линк, ако имаш. Добавям ги на ръка, затова може да отнеме някой и друг ден.
+                Ако размислиш, пиши отново и ще те махна.
+              </div>
+            </div>
+            <div class="diary-footer">
+              <time datetime="2026-11-26T15:43">26 Ноември 26, 15:43</time>
+
+              <a href="diary/entry-2.html#comments" class="comments-link">
+                <span data-comments-count="diary-2">Коментари</span>
+              </a>
+              <span class="edit-icon" aria-hidden="true">✏️</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment-rules centered">
+          <p>Моля, остави добри думи. Коментарите са част от душата на този блог.</p>
+        </div>
+
+        <section class="comments" id="comments" data-comments="diary-2">
+          <h3 class="comments-heading">Коментари</h3>
+          <p class="comments-status centered">Зареждане...</p>
+        </section>
+
+        <section class="add-new-comment centered">
+          <h4>Добави коментар</h4>
+          <form data-comments-form="diary-2">
+            <div class="form-row">
+              <label for="from">От:</label>
+              <input type="text" name="from" id="from" maxlength="40">
+            </div>
+
+            <div class="form-row">
+              <label for="comment">Коментар:</label>
+              <textarea name="comment" id="comment" rows="4" maxlength="2000"></textarea>
+            </div>
+
+            <!-- Honeypot: hidden from people, bots fill it in. -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-row captcha">
+              <img src="../assets/img/captcha_image.png" alt="CAPTCHA">
+              <div>
+                <p>Въведи кода от картинката</p>
+                <input type="text" name="keystring" id="keystring" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <button type="button" class="uppercase" id="addComment">Добави коментар</button>
+            </div>
+            <p class="form-message" role="status"></p>
+          </form>
+        </section>
+      </article>
+
+      </main>
+    </div>
+    <include-html src="/layout/footer.html"></include-html>
+  </div>
+  <include-html src="/layout/adbox.html"></include-html>
+
+</body>
+
+</html>

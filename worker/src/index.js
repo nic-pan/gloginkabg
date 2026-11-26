@@ -3,8 +3,8 @@
 
 // Each post has its own comment name: the section, then an optional number.
 // The first diary entry and the first library item use "diary" and "library".
-// Later posts use "diary-2", "library-2", "news-1" and so on.
-const PAGE_ID = /^(diary|library|news)(-[0-9]{1,4})?$/;
+// Later posts use "diary-2", "library-2", "news-1" and so on. The mp3 page uses "mp3".
+const PAGE_ID = /^(diary|library|news|mp3)(-[0-9]{1,4})?$/;
 const isPage = page => PAGE_ID.test(page);
 const CAPTCHA_CODE = 'abvau';
 const NAME_MAX = 40;

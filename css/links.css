@@ -12,10 +12,11 @@
   }
 
   
-  .link-icon img {
-    width: 13px;
-    height: auto;
-    margin-top: 3px;
+  /* The theme bullet replaces the old bullet_5.gif. */
+  .link-icon::before {
+    content: var(--listBullet, "•");
+    font-size: var(--listBulletSize, 8px);
+    color: var(--navBullet, var(--secondary));
   }
   
   .link-title {
@@ -38,3 +39,22 @@
     text-decoration: underline;
   }
   
+/* dir.bg .links_1 (title) and .links_2 (address). */
+.item {
+    font-size: 11px;
+}
+
+.link-title {
+    font-size: 12px;
+    color: var(--linksTitle, var(--secondary));
+    text-decoration: underline;
+}
+
+.link-title:hover {
+    text-decoration: none;
+}
+
+.link-url a {
+    font-size: 11px;
+    color: var(--linksUrl, var(--secondary));
+}

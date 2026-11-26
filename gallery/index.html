@@ -18,7 +18,7 @@
         <div class="container">
             <include-html src="/layout/sidebar.html"></include-html>
 
-            <main>
+            <main class="bordered">
                 <include-html src="/layout/topbar.html"></include-html>
                 <div class="sectionHeader">
                     <span class="headerImg"></span>
@@ -42,7 +42,7 @@
             category.items.forEach((item, i) => {
                 const div = document.createElement('div');
                 div.className = 'gallery-item';
-                div.innerHTML = `<a href="gallery/item?cat=${cat}&id=${i}"><img src="${item.src}" alt="${item.title}"><p>${item.title}</p></a>`;
+                div.innerHTML = `<a href="gallery/item.html?cat=${cat}&id=${i}"><img src="${item.src}" alt="${item.title}"><p>${item.title}</p></a>`;
                 grid.appendChild(div);
             });
             section.appendChild(grid);

@@ -1,6 +1,7 @@
 {
     "white": {
       "colors": {
+        "--membersLink": "#3366cc",
         "--buttonText": "#FFFFFF",
         "--buttonBorder": "1px solid #000000",
         "--buttonBG": "#3366cc",
@@ -30,6 +31,13 @@
   
     "candy": {
       "colors": {
+        "--membersLink": "#A077A4",
+        "--linksUrl": "#66CC33",
+        "--linksTitle": "#D350A9",
+        "--photoTitle": "#66CC33",
+        "--photoBoxBorder": "1px solid #CCCCCC",
+        "--photoBoxBG": "#FFFFFF",
+        "--galleryLink": "#A077A4",
         "--newsText": "#A077A4",
         "--newsTitle": "#D350A9",
         "--newsLink": "#D350A9",
@@ -101,6 +109,12 @@
 
     "garden": {
       "colors": {
+        "--membersLink": "#A673BB",
+        "--linksUrl": "#84BF3C",
+        "--linksTitle": "#A673BB",
+        "--photoTitle": "#A673BB",
+        "--photoBoxBorder": "1px solid #84BF3C",
+        "--galleryLink": "#84BF3C",
         "--newsText": "#D98ADB",
         "--newsTitle": "#A673BB",
         "--newsLink": "#A673BB",
@@ -176,6 +190,13 @@
   
     "skyBlue": {
       "colors": {
+        "--membersLink": "#3E76B1",
+        "--linksUrl": "#3E76B1",
+        "--linksTitle": "#3E76B1",
+        "--photoTitle": "#3E76B1",
+        "--photoBoxBorder": "1px solid #A7BFEA",
+        "--photoBoxBG": "#FFFFFF",
+        "--galleryLink": "#204063",
         "--newsText": "#204063",
         "--newsTitle": "#3E76B1",
         "--newsLink": "#3E76B1",
@@ -254,6 +275,13 @@
 
     "bloodOrange": {
       "colors": {
+        "--membersLink": "#DF3A0B",
+        "--linksUrl": "#339900",
+        "--linksTitle": "#DF3A0B",
+        "--photoTitle": "#DF3A0B",
+        "--photoBoxBorder": "1px solid #CCCCCC",
+        "--photoBoxBG": "#FFFFFF",
+        "--galleryLink": "#3C5A12",
         "--newsText": "#339900",
         "--newsTitle": "#DF3A0B",
         "--newsLink": "#DF3A0B",
@@ -337,6 +365,12 @@
 
     "purpleDream": {
       "colors": {
+        "--membersLink": "#59518C",
+        "--linksUrl": "#59518C",
+        "--linksTitle": "#D26CAC",
+        "--photoTitle": "#D26CAC",
+        "--photoBoxBorder": "1px solid #AEA6CB",
+        "--galleryLink": "#D26CAC",
         "--newsText": "#59518C",
         "--newsTitle": "#59518C",
         "--newsLink": "#59518C",
@@ -410,6 +444,12 @@
   
     "bordeaux": {
       "colors": {
+        "--membersLink": "#B13000",
+        "--linksUrl": "#999999",
+        "--linksTitle": "#B13000",
+        "--photoTitle": "#B13000",
+        "--photoBoxBorder": "none",
+        "--galleryLink": "#666666",
         "--newsText": "#666666",
         "--newsTitle": "#000000",
         "--newsLink": "#B13000",
@@ -488,6 +528,12 @@
 
     "night": {
       "colors": {
+        "--membersLink": "#CCCCCC",
+        "--linksUrl": "#999999",
+        "--linksTitle": "#CC0000",
+        "--photoTitle": "#CC0000",
+        "--photoBoxBorder": "1px solid #979797",
+        "--galleryLink": "#CCCCCC",
         "--newsText": "#999999",
         "--newsTitle": "#FFFFFF",
         "--newsLink": "#FFFFFF",
@@ -563,6 +609,12 @@
   
     "leaf": {
       "colors": {
+        "--membersLink": "#002919",
+        "--linksUrl": "#002919",
+        "--linksTitle": "#A90000",
+        "--photoTitle": "#A90000",
+        "--photoBoxBorder": "1px solid #AEA6CB",
+        "--galleryLink": "#002919",
         "--newsText": "#002919",
         "--newsTitle": "#002919",
         "--newsLink": "#002919",

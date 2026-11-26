@@ -28,13 +28,14 @@
         <div id="password-gate" class="password-gate">
           <p class="gate-hint">Тайните на Глогинка</p>
           <hr>
+          <p class="gate-error" id="gateError"></p>
+          <p class="gate-msg">За достъп до тази страница ви е необходима парола от собственика на сайта</p>
           <p class="gate-msg">Паролата е gloginka</p>
           <div class="gate-form">
             <label for="passwordInput">Парола:</label>
-            <input type="text" id="passwordInput" onkeydown="if(event.key==='Enter') unlock()">
+            <input type="password" id="passwordInput" onkeydown="if(event.key==='Enter') unlock()">
             <button onclick="unlock()">log in</button>
           </div>
-          <p class="gate-error" id="gateError"></p>
         </div>
 
         <div id="file-list" class="file-list" style="display:none;">

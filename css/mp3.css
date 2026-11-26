@@ -227,3 +227,18 @@
   margin: 0.8rem auto;
   font-size: 12px;
 }
+
+/* Comments under the player: the same framed box as the diary (dir.bg .comment_tbl). */
+main.mp3-page section.comments {
+    max-width: none;
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px;
+    border: var(--commentBoxBorder, 1px solid var(--secondary));
+    background: var(--commentBoxBG, transparent);
+}
+
+main.mp3-page .commentContent {
+    width: auto;
+    flex: 1;
+}

@@ -18,7 +18,7 @@
         <div class="container">
             <include-html src="/layout/sidebar.html"></include-html>
 
-            <main>
+            <main class="bordered">
                 <include-html src="/layout/topbar.html"></include-html>
                 <div class="sectionHeader">
                     <span class="headerImg"></span>
@@ -48,22 +48,24 @@
         if (!item) {
             view.innerHTML = '<p style="padding:12px">Снимката не е намерена. <a href="/gallery/">← Галерия</a></p>';
         } else {
+            // Like dir.bg: "Category" « Предишна  Следваща » above one framed photo.
+            // The photo opens in full size in a new tab.
             const prev = id > 0
-                ? `<a href="/gallery/item?cat=${cat}&id=${id - 1}">← Предишна</a>`
-                : `<span class="nav-disabled">← Предишна</span>`;
+                ? `<a href="gallery/item.html?cat=${cat}&id=${id - 1}">&laquo; Предишна</a>`
+                : '';
             const next = id < category.items.length - 1
-                ? `<a href="/gallery/item?cat=${cat}&id=${id + 1}">Следваща →</a>`
-                : `<span class="nav-disabled">Следваща →</span>`;
+                ? `<a href="gallery/item.html?cat=${cat}&id=${id + 1}">Следваща &raquo;</a>`
+                : '';
 
             view.innerHTML = `
                 <div class="gallery-nav">
-                    <a href="gallery/">← Галерия</a>
-                    <span class="gallery-nav-sep">|</span>
-                    <span class="gallery-nav-arrows">${prev}<span class="gallery-nav-sep">|</span>${next}</span>
+                    <a href="gallery/"><b>"${category.label}"</b></a>
+                    ${prev}
+                    ${next}
                 </div>
-                <div class="gallery-full bordered">
-                    <img src="${item.src}" alt="${item.title}">
-                    <p>${item.title}</p>
+                <div class="gallery-full">
+                    <a href="${item.src}" target="_blank" rel="noopener"><img src="${item.src}" alt="${item.title}"></a>
+                    <p class="gallery-photo-title">${item.title}</p>
                 </div>`;
         }
     </script>

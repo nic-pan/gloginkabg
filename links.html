@@ -17,7 +17,7 @@
         <div class="container">
             <include-html src="/layout/sidebar.html"></include-html>
 
-            <main class="links">
+            <main class="bordered links">
                 <include-html src="/layout/topbar.html"></include-html>
                 <div class="sectionHeader">
                     <span class="headerImg"></span>
@@ -41,10 +41,7 @@
 
     links.forEach(link => {
         const html = `<div class="item">
-                    <a href="${link.url}" target="_blank" class="link-icon">
-                        <img src="/web/20080609222519im_/http://h2o-just-add-water-the-best.dir.bg/_wm/statics/pink_img_1/bullet_5.gif"
-                            alt="*" />
-                    </a>
+                    <span class="link-icon" aria-hidden="true"></span>
                     <div class="link-description">
                         <a href="${link.url}" target="_blank" class="link-title underlined">
                             <b>${link.description}</b>

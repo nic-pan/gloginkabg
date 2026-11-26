@@ -14,9 +14,10 @@
   margin: 0 0 0.4rem;
 }
 
+/* dir.bg: the protected-page notice was brown. */
 .gate-msg {
-  color: #cc0000;
-  font-size: 14px;
+  color: brown;
+  font-size: 11px;
   margin: 0 0 0.75rem;
 }
 
@@ -27,7 +28,8 @@
   font-size: 13px;
 }
 
-.gate-form input[type="text"] {
+.gate-form input[type="text"],
+.gate-form input[type="password"] {
   font-size: 13px;
   padding: 2px 4px;
   border: 1px solid #999;
@@ -50,10 +52,12 @@
   border-bottom-color: #999;
 }
 
+/* dir.bg showed a bold red error above the notice. */
 .gate-error {
-  color: #cc0000;
-  font-size: 12px;
-  margin: 0.5rem 0 0;
+  color: red;
+  font-weight: bold;
+  font-size: 11px;
+  margin: 0 0 0.5rem;
   min-height: 1em;
 }
 

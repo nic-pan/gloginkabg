@@ -81,3 +81,77 @@
     font-weight: bold;
     color: var(--galleryTitle, var(--primary));
 }
+
+/* dir.bg gallery grid (.gallery_2): 4 photos in each row, 25% columns,
+   no frame, the title centered under the photo. */
+.items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px 0;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 0 12px;
+}
+
+.gallery-item {
+    width: auto;
+    border: none;
+    background: none;
+    padding: 0 4px;
+}
+
+.gallery-item img {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.gallery-item p {
+    padding-top: 3px;
+    margin: 0;
+}
+
+.gallery-item a {
+    color: var(--galleryLink, var(--secondary));
+    font-size: 11px;
+}
+
+.gallery-cat-title {
+    color: var(--newsGroupTitle, var(--entryTitle, var(--primary)));
+}
+
+/* Photo page, like dir.bg item.php: a nav row, then one framed photo (.snimka_tbl). */
+.gallery-nav {
+    gap: 14px;
+    height: 35px;
+    padding: 0 12px;
+    border-bottom: none;
+    margin-bottom: 0;
+    font-size: 11px;
+}
+
+.gallery-nav a {
+    color: var(--pagerText, var(--secondary));
+    text-decoration: underline;
+}
+
+.gallery-full {
+    width: 95%;
+    margin: 0 auto 10px;
+    padding: 15px;
+    background: var(--photoBoxBG, transparent);
+    border: var(--photoBoxBorder, 1px solid var(--secondary));
+}
+
+/* dir.bg showed photos at most 400 x 300 px; a click opened the full size. */
+.gallery-full img {
+    max-width: 400px;
+    max-height: 300px;
+    width: auto;
+}
+
+.gallery-full .gallery-photo-title {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 0 10px;
+    color: var(--photoTitle, var(--entryTitle, var(--primary)));
+}

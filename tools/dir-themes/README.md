@@ -44,3 +44,16 @@ Not found yet: the beige theme (`braun_css`, housecosy.dir.bg). `white` (Кла�
 | `.horz_nav` | topbar links |
 | `.comment_td_1`, `.comment_td_2` | commenter box, comment box |
 | `.footer_table` | footer |
+
+## Screenshots that show unbuilt themes
+
+The gallery screenshots in `assets/img/gallery/references/` show some themes we have not built yet:
+
+| Screenshot | Look | Probable theme |
+|---|---|---|
+| housecosy.png | beige/brown header, tan section header, red links | braun_css (the missing beige theme) |
+| revoluciqz.png | teal section header and calendar | soft_css |
+| evro2008.png | dark green, yellow header frame | green_css_1 |
+| gobelins.png, imperio.png | red header, gray or white sidebar | red_ccs_1 or red_ccs_2 |
+
+The tokiohotel-fan.dir.bg catalog snapshot (2007-10) also uses soft_css.
