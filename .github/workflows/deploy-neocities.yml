@@ -30,6 +30,7 @@ jobs:
             --exclude 'worker/' \
             --exclude 'docker-compose.yml' \
             --exclude 'serve.json' \
+            --exclude 'tools/' \
             --exclude '_site/'
           echo "Files to deploy:"
           find _site -type f | sort

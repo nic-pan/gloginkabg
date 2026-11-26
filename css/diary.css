@@ -79,7 +79,7 @@ main.diary .diary-entry {
     display: flex;
     gap: 4px;
     margin-top: 4px;
-    color: var(--commentText)
+    color: var(--commentText, inherit);
 }
 
 .comment>div {
@@ -99,7 +99,7 @@ main.diary .diary-entry {
 }
 
 .diary-footer time {
-    color: var(--timestamp)
+    color: var(--timestamp, inherit);
 }
 
 .comment a:hover {
@@ -109,7 +109,7 @@ main.diary .diary-entry {
 .commenter {
     display: flex;
     flex-direction: column;
-    background-color: var(--commenterBG);
+    background-color: var(--commenterBG, var(--accent));
     color: var(--commenterText, var(--primary));
     padding: 4px;
     width: 120px;
@@ -122,7 +122,7 @@ main.diary .diary-entry {
 
 .commentContent {
     width: 460px;
-    background-color: var(--comment);
+    background-color: var(--comment, var(--contentBG));
     border: var(--commentBorder, none);
 }
 
@@ -194,7 +194,7 @@ main.diary .diary-entry {
     font-family: Verdana;
     font-weight: bold;
     border: 1px solid var(--accent);
-    color: var(--accent2);
+    color: var(--accent2, var(--accentText));
     background-color: var(--accent);
     width: 142px;
     height: 20px;

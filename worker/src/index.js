@@ -43,6 +43,7 @@ export default {
         case 'POST /visit':    return json(await recordVisit(env, request), 200, cors);
         case 'GET /rating':    return json(await getRating(env), 200, cors);
         case 'POST /rating':   return await addRating(env, request, cors);
+        case 'GET /weather':   return json(await getWeather(), 200, cors);
         default:               return json({ error: 'not found' }, 404, cors);
       }
     } catch (err) {
@@ -51,6 +52,25 @@ export default {
     }
   },
 };
+
+// ---------- weather ----------
+// Current weather in Sofia from Open-Meteo (free, no key).
+// The Worker asks for it, so visitors never contact Open-Meteo.
+// Cloudflare's cache keeps one answer for 30 minutes.
+
+const WEATHER_URL = 'https://api.open-meteo.com/v1/forecast'
+  + '?latitude=42.6977&longitude=23.3219'
+  + '&current=temperature_2m,weather_code&timezone=Europe%2FSofia';
+
+async function getWeather() {
+  const res = await fetch(WEATHER_URL, { cf: { cacheTtl: 1800, cacheEverything: true } });
+  if (!res.ok) throw new Error(`weather HTTP ${res.status}`);
+  const data = await res.json();
+  return {
+    temp: Math.round(data.current.temperature_2m),
+    code: data.current.weather_code,
+  };
+}
 
 // ---------- comments ----------
 

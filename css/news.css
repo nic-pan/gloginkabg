@@ -33,7 +33,7 @@
 
 
 .news-list li:nth-child(even) {
-    background: var(--accent2);
+    background: var(--accent2, var(--accent));
 }
 
 .news-item-row {

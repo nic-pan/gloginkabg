@@ -218,6 +218,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   await includeHTML();
 
   renderPrebarDate();
+  renderPrebarWeather();
   generateCalendar();
   renderRatingControls();
   renderNavigation();
@@ -420,6 +421,34 @@ function renderPrebarDate() {
   const days = ['неделя', 'понеделник', 'вторник', 'сряда', 'четвъртък', 'петък', 'събота'];
   const months = ['януари', 'февруари', 'март', 'април', 'май', 'юни', 'юли', 'август', 'септември', 'октомври', 'ноември', 'декември'];
   el.textContent = `📅 ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}, ${days[now.getDay()]}`;
+}
+
+// WMO weather codes from Open-Meteo, grouped into a few retro labels.
+function weatherLabel(code) {
+  if (code === 0) return '☀️ Слънчево';
+  if (code <= 2) return '🌤️ Предимно слънчево';
+  if (code === 3) return '☁️ Облачно';
+  if (code <= 48) return '🌫️ Мъгла';
+  if (code <= 67 || (code >= 80 && code <= 82)) return '🌧️ Дъжд';
+  if (code <= 77 || code === 85 || code === 86) return '❄️ Сняг';
+  return '⛈️ Гръмотевици';
+}
+
+function renderPrebarWeather() {
+  const el = document.getElementById('prebar-weather');
+  if (!el) return;
+  const show = w => { el.textContent = `${weatherLabel(w.code)}, ${w.temp}°C в София`; };
+
+  const cached = sessionStorage.getItem('glog-weather');
+  if (cached) return show(JSON.parse(cached));
+
+  fetch(`${API}/weather`)
+    .then(res => res.ok ? res.json() : Promise.reject(res.status))
+    .then(w => {
+      sessionStorage.setItem('glog-weather', JSON.stringify(w));
+      show(w);
+    })
+    .catch(err => console.warn('Weather failed:', err));
 }
 
 function renderRatingControls() {
