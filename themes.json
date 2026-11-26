@@ -1,6 +1,9 @@
 {
     "white": {
       "colors": {
+        "--buttonText": "#FFFFFF",
+        "--buttonBorder": "1px solid #000000",
+        "--buttonBG": "#3366cc",
         "--bg": "#ffffff",
         "--contentBG": "#fff",
         "--primary": "#000000",
@@ -27,6 +30,13 @@
   
     "candy": {
       "colors": {
+        "--buttonText": "#FFFFFF",
+        "--buttonBorder": "1px solid #009933",
+        "--buttonBG": "#00CC33",
+        "--pagerLink": "#691B50",
+        "--pagerText": "#66CC33",
+        "--commentHeading": "#D350A9",
+        "--commentBoxBorder": "1px solid #E7DBE8",
         "--calendarWeekdayColor": "#FFFFFF",
         "--calendarWeekdayBG": "#9E2778",
         "--widgetTitle": "#D7EAFA",
@@ -82,6 +92,13 @@
 
     "garden": {
       "colors": {
+        "--buttonText": "#FFFFFF",
+        "--buttonBorder": "1px solid #000000",
+        "--buttonBG": "#D98ADB",
+        "--pagerLink": "#A673BB",
+        "--pagerText": "#D26CAC",
+        "--commentHeading": "#84BF3C",
+        "--commentBoxBorder": "1px solid #84BF3C",
         "--gloginLink": "#66952D",
         "--gloginBullet": "#D98ADB",
         "--gloginTitle": "#D98ADB",
@@ -140,6 +157,14 @@
   
     "skyBlue": {
       "colors": {
+        "--buttonText": "#FFFFFF",
+        "--buttonBorder": "1px solid #FFFFFF",
+        "--buttonBG": "#3E76B1",
+        "--pagerLink": "#3E76B1",
+        "--pagerText": "#3E76B1",
+        "--commentHeading": "#3E76B1",
+        "--commentBoxBorder": "1px solid #A7BFEA",
+        "--commentBoxBG": "#D7EAFA",
         "--calendarCellBG": "#ffffff",
         "--gloginBG": "#6192C7",
         "--gloginBorder": "#61A2E8",
@@ -200,6 +225,14 @@
 
     "bloodOrange": {
       "colors": {
+        "--buttonText": "#FFFFFF",
+        "--buttonBorder": "1px solid #FFFFFF",
+        "--buttonBG": "#CC0001",
+        "--pagerLink": "#DF3A0B",
+        "--pagerText": "#DF3A0B",
+        "--commentHeading": "#DF3A0B",
+        "--commentBoxBorder": "1px solid #DF3A0B",
+        "--commentBoxBG": "#FFFFFF",
         "--gloginBullet": "#FFFF06",
         "--bg": "#339900",
         "--contentBG": "#FDF1E3",
@@ -265,6 +298,14 @@
 
     "purpleDream": {
       "colors": {
+        "--buttonText": "#FFFFFF",
+        "--buttonBorder": "1px solid #000000",
+        "--buttonBG": "#59518C",
+        "--pagerLink": "#D26CAC",
+        "--pagerText": "#D26CAC",
+        "--commentHeading": "#59518C",
+        "--commentBoxBorder": "1px solid #AEA6CB",
+        "--commentBoxBG": "#F9F4FD",
         "--headerBorderTop": "none",
         "--prebarBorder": "3px solid #E6DEF5",
         "--prebarText": "#ffffff",
@@ -320,6 +361,13 @@
   
     "bordeaux": {
       "colors": {
+        "--buttonText": "#FFFFFF",
+        "--buttonBorder": "1px solid #000000",
+        "--buttonBG": "#000000",
+        "--pagerLink": "#666666",
+        "--pagerText": "#B13000",
+        "--commentHeading": "#7D562B",
+        "--commentBoxBorder": "none",
         "--gloginBullet": "#CC0000",
         "--gloginLink": "#777777",
         "--gloginTitle": "#CC0000",
@@ -382,6 +430,14 @@
 
     "night": {
       "colors": {
+        "--buttonText": "#FFFFFF",
+        "--buttonBorder": "1px solid #FFFFFF",
+        "--buttonBG": "#CC0000",
+        "--pagerLink": "#999999",
+        "--pagerText": "#CC0000",
+        "--commentHeading": "#CC0000",
+        "--commentBoxBorder": "1px solid #999999",
+        "--commentBoxBG": "#333333",
         "--calendarWeekdayColor": "#FFFFFF",
         "--gloginBullet": "#DC1F29",
         "--gloginLink": "#777777",
@@ -439,6 +495,13 @@
   
     "leaf": {
       "colors": {
+        "--buttonText": "#FFFFFF",
+        "--buttonBorder": "1px solid #000000",
+        "--buttonBG": "#CC0001",
+        "--pagerLink": "#59518C",
+        "--pagerText": "#A90000",
+        "--commentHeading": "#A90000",
+        "--commentBoxBorder": "1px solid #A2BFB4",
         "--comment": "#EFF4F2",
         "--commenterBG": "#FFFFCC",
         "--timestamp": "#A90000",

@@ -52,9 +52,16 @@ main.diary .diary-entry {
     margin-bottom: 7px;
 }
 
-.diary-footer .icon {
-    vertical-align: middle;
-    height: 14px;
+/* dir.bg showed a theme bullet before "Коментари" and a pencil after it. */
+.comments-link::before {
+    content: var(--listBullet, "•");
+    font-size: var(--listBulletSize, 8px);
+    color: var(--navBullet, var(--commentsLinkColor, var(--secondary)));
+    margin-right: 4px;
+}
+
+.edit-icon {
+    font-size: 11px;
 }
 
 .comments-link {
@@ -193,22 +200,61 @@ main.diary .diary-entry {
     font-size: 10px;
     font-family: Verdana;
     font-weight: bold;
-    border: 1px solid var(--accent);
-    color: var(--accent2, var(--accentText));
-    background-color: var(--accent);
+    /* dir.bg .formi: white bold text on a strong theme color. */
+    border: var(--buttonBorder, 1px solid #000000);
+    color: var(--buttonText, #FFFFFF);
+    background-color: var(--buttonBG, var(--secondary));
+    cursor: pointer;
     width: 142px;
     height: 20px;
     margin: 0 auto;
 }
 
+/* The entry page comment box: a framed box at 95% of the content width,
+   like the dir.bg .comment_tbl. */
 main.diary-entry section.comments {
-    border: solid 1px var(--secondary);
-    padding: 15px;
+    max-width: none;
+    width: 95%;
     margin: 0 auto;
+    padding: 15px;
+    border: var(--commentBoxBorder, 1px solid var(--secondary));
+    background: var(--commentBoxBG, transparent);
 }
 
-main.diary-entry section.comments h3 {
-    margin-bottom: 30px;
+main.diary-entry .commentContent {
+    width: auto;
+    flex: 1;
+}
+
+.comments-heading {
+    margin: 0 0 8px;
+    padding: 5px 5px 0 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--commentHeading, var(--entryTitle, var(--primary)));
+}
+
+.comments-heading::before {
+    content: var(--listBullet, "•");
+    font-size: var(--listBulletSize, 8px);
+    color: var(--navBullet, var(--commentHeading, var(--secondary)));
+    margin-right: 7px;
+}
+
+.comments-pager {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    color: var(--pagerText, var(--commentHeading, var(--secondary)));
+}
+
+.comments-pager a {
+    color: var(--pagerLink, var(--commentText, var(--secondary)));
+    text-decoration: underline;
+}
+
+.comments-pager a:hover {
+    text-decoration: none;
 }
 /* Live comments (see initComments in script.js) */
 .commentContent {

@@ -320,6 +320,67 @@ function buildComment(comment, number, link) {
   return article;
 }
 
+const COMMENTS_PER_PAGE = 100;
+const PAGER_GROUP = 15;
+
+// Pager like dir.bg: "начало 1 . 2 . 3 ... 15 16..30 край".
+// It shows 15 page numbers at a time. A range link opens the next or previous group.
+function buildPager(current, pages) {
+  const nav = document.createElement('nav');
+  nav.className = 'comments-pager';
+  const pageLink = (n, text) => {
+    const params = new URLSearchParams(location.search);
+    params.set('cp', n);
+    const a = document.createElement('a');
+    a.href = `${location.pathname}?${params}#comments`;
+    a.textContent = text;
+    return a;
+  };
+  const edge = (n, text) => {
+    if (n !== current) return pageLink(n, text);
+    const span = document.createElement('span');
+    span.textContent = text;
+    return span;
+  };
+
+  const groupStart = Math.floor((current - 1) / PAGER_GROUP) * PAGER_GROUP + 1;
+  const groupEnd = Math.min(pages, groupStart + PAGER_GROUP - 1);
+
+  nav.append(edge(1, 'начало'), ' ');
+  if (groupStart > 1) {
+    nav.append(pageLink(groupStart - 1, `${groupStart - PAGER_GROUP}..${groupStart - 1}`), ' ');
+  }
+  for (let n = groupStart; n <= groupEnd; n++) {
+    if (n === current) {
+      const b = document.createElement('b');
+      b.textContent = n;
+      nav.append(b);
+    } else {
+      nav.append(pageLink(n, n));
+    }
+    if (n < groupEnd) nav.append(' . ');
+  }
+  if (groupEnd < pages) {
+    nav.append(' ', pageLink(groupEnd + 1, `${groupEnd + 1}..${Math.min(pages, groupEnd + PAGER_GROUP)}`));
+  }
+  nav.append(' ', edge(pages, 'край'));
+  return nav;
+}
+
+// Local test switch: on localhost, ?test=250 shows 250 fake comments.
+// The server is not asked. The live site ignores the switch.
+function testComments() {
+  const local = ['localhost', '127.0.0.1'].includes(location.hostname);
+  const count = parseInt(new URLSearchParams(location.search).get('test') || '0');
+  if (!local || !count) return null;
+  const start = new Date('2008-01-01T12:00:00Z').getTime();
+  return Array.from({ length: count }, (_, i) => ({
+    name: `тест_${i + 1}`,
+    text: `Тестов коментар номер ${i + 1}.`,
+    created_at: new Date(start + i * 3600000).toISOString(),
+  }));
+}
+
 async function loadComments(section) {
   const page = section.dataset.comments;
   const limit = parseInt(section.dataset.commentsLimit || '0');
@@ -327,17 +388,28 @@ async function loadComments(section) {
 
   let comments = [];
   try {
-    const res = await api(`/comments?page=${encodeURIComponent(page)}`);
-    comments = res.data.comments || [];
+    comments = testComments() || (await api(`/comments?page=${encodeURIComponent(page)}`)).data.comments || [];
   } catch (err) {
     console.warn('Comments failed:', err);
     section.querySelector('.comments-status')?.replaceChildren('Коментарите не могат да се заредят в момента.');
     return;
   }
 
-  section.querySelectorAll('article.comment, .comments-status').forEach(el => el.remove());
-  const start = limit ? Math.max(0, comments.length - limit) : 0;
-  comments.slice(start).forEach((c, i) => section.append(buildComment(c, start + i + 1, link)));
+  section.querySelectorAll('article.comment, .comments-status, .comments-pager').forEach(el => el.remove());
+  // Newest first, like dir.bg. The full list numbers from the total down
+  // (107, 106, ...). A short preview numbers from 1 (1 = newest).
+  const newest = [...comments].reverse();
+  if (limit) {
+    newest.slice(0, limit).forEach((c, i) => section.append(buildComment(c, i + 1, link)));
+  } else {
+    // dir.bg showed 100 comments on each page, with one pager above them.
+    const pages = Math.max(1, Math.ceil(newest.length / COMMENTS_PER_PAGE));
+    const current = Math.min(pages, Math.max(1, parseInt(new URLSearchParams(location.search).get('cp') || '1')));
+    if (pages > 1) section.append(buildPager(current, pages));
+    const start = (current - 1) * COMMENTS_PER_PAGE;
+    newest.slice(start, start + COMMENTS_PER_PAGE)
+      .forEach((c, i) => section.append(buildComment(c, comments.length - start - i, link)));
+  }
 
   if (!comments.length && !limit) {
     const empty = document.createElement('p');

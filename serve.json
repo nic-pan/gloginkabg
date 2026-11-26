@@ -1,4 +1,8 @@
 {
   "cleanUrls": false,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/:dir([a-z0-9_-]+)", "destination": "/:dir/index.html" },
+    { "source": "/", "destination": "/index.html" }
+  ]
 }
