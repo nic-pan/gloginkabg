@@ -217,6 +217,11 @@ function changeMonth(offset) {
 document.addEventListener("DOMContentLoaded", async function () {
   await includeHTML();
 
+  // The prebar spans the full screen, like the dir.bg portal bar.
+  // Move it out of the 960px page wrapper to the top of <body>.
+  const prebar = document.querySelector('.prebar');
+  if (prebar) document.body.prepend(prebar);
+
   renderPrebarDate();
   renderPrebarWeather();
   generateCalendar();

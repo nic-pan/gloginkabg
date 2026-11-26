@@ -27,6 +27,10 @@
   
     "candy": {
       "colors": {
+        "--prebarBG": "#DD77BB",
+        "--prebarText": "#ffffff",
+        "--prebarBorder": "2px solid #803B71",
+        "--headerBorderTop": "none",
         "--bg": "#DD77BB",
         "--contentBG": "#fff",
         "--primary": "#691B50",
@@ -118,6 +122,16 @@
   
     "skyBlue": {
       "colors": {
+        "--calendarCellBG": "#ffffff",
+        "--gloginBG": "#6699CC",
+        "--gloginBorder": "#8AB4E6",
+        "--gloginTitle": "#99CC00",
+        "--gloginLink": "#ffffff",
+        "--gloginBullet": "#FF0000",
+        "--prebarBG": "#006699",
+        "--prebarText": "#ffffff",
+        "--prebarBorder": "2px solid #FFFFFF",
+        "--headerBorderTop": "none",
         "--bg": "#648cb4",
         "--contentBG": "#EEF6FD",
         "--headerBG": "#1B3B5D",
@@ -137,7 +151,7 @@
         "--calendarText": "#ffffff",
         "--calendarWeekdayBG": "#D7EAFA",
         "--calendarWeekdayColor": "#316C75",
-        "--calendarMonthColor": "#316C75",
+        "--calendarPageMonth": "#316C75",
         "--calendarCell": "#D7EAFA",
         "--calendarDate": "#316C75",
         "--navBorder": "#61A2E8",
@@ -185,6 +199,7 @@
         "--prebarBG": "#DF3A0B",
         "--prebarText": "#ffffff",
         "--prebarBorder": "3px solid #3C5A12",
+        "--headerBorderTop": "none",
         "--sectionHeaderBorderBottom": "1px solid #3C5A12",
         "--calendarBorder": "#ffffff",
         "--calendarSectionBG": "#FFC42C",
@@ -336,6 +351,10 @@
 
     "night": {
       "colors": {
+        "--prebarBG": "#333333",
+        "--prebarText": "#ffffff",
+        "--prebarBorder": "2px solid #cccccc",
+        "--headerBorderTop": "none",
         "--bg": "#3C3C3C",
         "--contentBG": "#000",
         "--headerBG": "#000",

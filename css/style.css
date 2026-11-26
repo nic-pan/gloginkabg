@@ -97,6 +97,11 @@ header h1 a:hover {
   border: 1px solid var(--borderColor, var(--secondary));
 }
 
+/* A theme can drop the header's top line when the prebar has its own border. */
+header.bordered {
+  border-top: var(--headerBorderTop, 1px solid var(--borderColor, var(--secondary)));
+}
+
 .centered {
   text-align: center;
 }
@@ -123,8 +128,8 @@ main {
 }
 
 .prebar {
-  background: var(--prebarBG, #1a1a1a);
-  color: var(--prebarText, #aaaaaa);
+  background: var(--prebarBG, var(--bg));
+  color: var(--prebarText, var(--navLink));
   font-size: 12px;
   padding: 9px 6px;
   border-bottom: var(--prebarBorder, none);
@@ -203,7 +208,7 @@ nav#additional {
 }
 
 .gloginki-section {
-  background: var(--accent);
+  background: var(--gloginBG, var(--accent));
   border: 1px var(--gloginBorder, var(--secondary)) solid;
   padding: 6px 8px;
   margin: 16px 8px;
@@ -237,12 +242,12 @@ nav#additional {
 .gloginki-list li::before {
   content: var(--listBullet);
   font-size: var(--listBulletSize, 8px);
-  color: var(--navBullet, var(--primary));
+  color: var(--gloginBullet, var(--navBullet, var(--primary)));
   flex-shrink: 0;
 }
 
 .gloginki-list a {
-  color: var(--accentText);
+  color: var(--gloginLink, var(--accentText));
   text-decoration: none;
   font-size: 11px;
   overflow: hidden;
