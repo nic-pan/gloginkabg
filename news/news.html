@@ -6,6 +6,7 @@
     <title>Последната глогинка</title>
     <base href="/">
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/diary.css" />
     <link rel="stylesheet" type="text/css" href="../css/news.css" />
     <script src="../script.js" type="text/javascript"></script>
 </head>
@@ -30,13 +31,57 @@
 
                 <div id="news-container">
                     <div class="info">
-                        25 май 25, 22:17 / Автор: глогинка
-                        <p>Имаме новина</p>
+                        <div class="date">25 Май 25, 22:17 / Автор: <i>глогинка</i></div>
+                        <h3 class="news-item-title">Имаме новина</h3>
                     </div>
                     <div class="content">
 
                     </div>
                 </div>
+
+                <hr class="news-comments-divider">
+                <div class="comment-rules centered">
+                        <p>Моля, остави добри думи. Коментарите са част от душата на този блог.</p>
+                    </div>
+
+                    <section class="comments" id="comments" data-comments="news-1">
+                        <h3 class="comments-heading">Коментари</h3>
+                        <p class="comments-status centered">Зареждане...</p>
+                    </section>
+
+                    <section class="add-new-comment centered">
+                      <h4>Добави коментар</h4>
+                      <form data-comments-form="news-1">
+                        <div class="form-row">
+                          <label for="from">От:</label>
+                          <input type="text" name="from" id="from" maxlength="40">
+                        </div>
+
+                        <div class="form-row">
+                          <label for="comment">Коментар:</label>
+                          <textarea name="comment" id="comment" rows="4" maxlength="2000"></textarea>
+                        </div>
+
+                        <!-- Honeypot: hidden from people, bots fill it in. -->
+                        <div class="hp-field" aria-hidden="true">
+                          <label for="website">Website</label>
+                          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="form-row captcha">
+                          <img src="../assets/img/captcha_image.png" alt="CAPTCHA">
+                          <div>
+                            <p>Въведи кода от картинката</p>
+                            <input type="text" name="keystring" id="keystring" autocomplete="off">
+                          </div>
+                        </div>
+
+                        <div class="form-row">
+                          <button type="button" class="uppercase" id="addComment">Добави коментар</button>
+                        </div>
+                        <p class="form-message" role="status"></p>
+                      </form>
+                    </section>
             </main>
         </div>
         <include-html src="/layout/footer.html"></include-html>

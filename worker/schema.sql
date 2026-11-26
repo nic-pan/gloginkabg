@@ -1,4 +1,4 @@
--- Comments for the diary entry and the library item.
+-- Comments. "page" names one post: "diary", "library", "diary-2", "news-1" ...
 CREATE TABLE IF NOT EXISTS comments (
   id         INTEGER PRIMARY KEY AUTOINCREMENT,
   page       TEXT NOT NULL,

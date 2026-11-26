@@ -30,6 +30,15 @@
   
     "candy": {
       "colors": {
+        "--newsText": "#A077A4",
+        "--newsTitle": "#D350A9",
+        "--newsLink": "#D350A9",
+        "--newsGroupTitle": "#66CC33",
+        "--dateColor": "#691B50",
+        "--catalogText": "#A077A4",
+        "--catalogTitle": "#D350A9",
+        "--catalogBorder": "1px solid #E7DBE8",
+        "--catalogBG": "#FFFFFF",
         "--buttonText": "#FFFFFF",
         "--buttonBorder": "1px solid #009933",
         "--buttonBG": "#00CC33",
@@ -92,6 +101,16 @@
 
     "garden": {
       "colors": {
+        "--newsText": "#D98ADB",
+        "--newsTitle": "#A673BB",
+        "--newsLink": "#A673BB",
+        "--newsGroupTitle": "#A673BB",
+        "--newsRowBG": "#F0F9E8",
+        "--dateColor": "#66952D",
+        "--catalogText": "#D98ADB",
+        "--catalogTitle": "#A673BB",
+        "--catalogBorder": "1px solid #84BF3C",
+        "--catalogBG": "#FFFFFF",
         "--buttonText": "#FFFFFF",
         "--buttonBorder": "1px solid #000000",
         "--buttonBG": "#D98ADB",
@@ -157,6 +176,16 @@
   
     "skyBlue": {
       "colors": {
+        "--newsText": "#204063",
+        "--newsTitle": "#3E76B1",
+        "--newsLink": "#3E76B1",
+        "--newsGroupTitle": "#3E76B1",
+        "--newsRowBG": "#E2F0FB",
+        "--dateColor": "#5E8DBE",
+        "--catalogText": "#17314D",
+        "--catalogTitle": "#3E76B1",
+        "--catalogBorder": "1px solid #A7BFEA",
+        "--catalogBG": "#FFFFFF",
         "--buttonText": "#FFFFFF",
         "--buttonBorder": "1px solid #FFFFFF",
         "--buttonBG": "#3E76B1",
@@ -225,6 +254,16 @@
 
     "bloodOrange": {
       "colors": {
+        "--newsText": "#339900",
+        "--newsTitle": "#DF3A0B",
+        "--newsLink": "#DF3A0B",
+        "--newsGroupTitle": "#CC0000",
+        "--newsRowBG": "#FBE2C4",
+        "--dateColor": "#339900",
+        "--catalogText": "#339900",
+        "--catalogTitle": "#DF3A0B",
+        "--catalogBorder": "1px solid #DF3A0B",
+        "--catalogBG": "#FFFFFF",
         "--buttonText": "#FFFFFF",
         "--buttonBorder": "1px solid #FFFFFF",
         "--buttonBG": "#CC0001",
@@ -298,6 +337,16 @@
 
     "purpleDream": {
       "colors": {
+        "--newsText": "#59518C",
+        "--newsTitle": "#59518C",
+        "--newsLink": "#59518C",
+        "--newsGroupTitle": "#D26CAC",
+        "--newsRowBG": "#EDE5F8",
+        "--dateColor": "#D26CAC",
+        "--catalogText": "#59518C",
+        "--catalogTitle": "#D26CAC",
+        "--catalogBorder": "1px solid #D2C5ED",
+        "--catalogBG": "#FFFFFF",
         "--buttonText": "#FFFFFF",
         "--buttonBorder": "1px solid #000000",
         "--buttonBG": "#59518C",
@@ -361,6 +410,15 @@
   
     "bordeaux": {
       "colors": {
+        "--newsText": "#666666",
+        "--newsTitle": "#000000",
+        "--newsLink": "#B13000",
+        "--newsGroupTitle": "#000000",
+        "--dateColor": "#999999",
+        "--catalogText": "#666666",
+        "--catalogTitle": "#B13000",
+        "--catalogBorder": "none",
+        "--catalogBG": "#FFFFFF",
         "--buttonText": "#FFFFFF",
         "--buttonBorder": "1px solid #000000",
         "--buttonBG": "#000000",
@@ -430,6 +488,16 @@
 
     "night": {
       "colors": {
+        "--newsText": "#999999",
+        "--newsTitle": "#FFFFFF",
+        "--newsLink": "#FFFFFF",
+        "--newsGroupTitle": "#CC0000",
+        "--newsRowBG": "#333333",
+        "--dateColor": "#777777",
+        "--catalogText": "#999999",
+        "--catalogTitle": "#CC0000",
+        "--catalogBorder": "1px solid #666666",
+        "--catalogBG": "#333333",
         "--buttonText": "#FFFFFF",
         "--buttonBorder": "1px solid #FFFFFF",
         "--buttonBG": "#CC0000",
@@ -495,6 +563,16 @@
   
     "leaf": {
       "colors": {
+        "--newsText": "#002919",
+        "--newsTitle": "#002919",
+        "--newsLink": "#002919",
+        "--newsGroupTitle": "#A90000",
+        "--newsRowBG": "#EFF4F2",
+        "--dateColor": "#A90000",
+        "--catalogText": "#002919",
+        "--catalogTitle": "#A90000",
+        "--catalogBorder": "1px solid #A2BFB4",
+        "--catalogBG": "#FFFFFF",
         "--buttonText": "#FFFFFF",
         "--buttonBorder": "1px solid #000000",
         "--buttonBG": "#CC0001",

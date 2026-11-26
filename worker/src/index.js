@@ -1,7 +1,11 @@
 // Comments, visit counter, and rating API for Последната глогинка.
 // Runs on Cloudflare Workers with one D1 database (binding: DB).
 
-const PAGES = new Set(['diary', 'library']);
+// Each post has its own comment name: the section, then an optional number.
+// The first diary entry and the first library item use "diary" and "library".
+// Later posts use "diary-2", "library-2", "news-1" and so on.
+const PAGE_ID = /^(diary|library|news)(-[0-9]{1,4})?$/;
+const isPage = page => PAGE_ID.test(page);
 const CAPTCHA_CODE = 'abvau';
 const NAME_MAX = 40;
 const TEXT_MAX = 2000;
@@ -76,7 +80,7 @@ async function getWeather() {
 
 async function listComments(env, url) {
   const page = url.searchParams.get('page');
-  if (!PAGES.has(page)) return { comments: [] };
+  if (!isPage(page)) return { comments: [] };
   const { results } = await env.DB
     .prepare('SELECT id, name, text, created_at FROM comments WHERE page = ? ORDER BY id')
     .bind(page)
@@ -96,7 +100,7 @@ async function addComment(env, request, cors) {
   const text = clean(body.text);
   const captcha = String(body.captcha || '').trim().toLowerCase();
 
-  if (!PAGES.has(page))                      return json({ error: 'page' }, 400, cors);
+  if (!isPage(page))                         return json({ error: 'page' }, 400, cors);
   if (!name || name.length > NAME_MAX)       return json({ error: 'name' }, 400, cors);
   if (!text || text.length > TEXT_MAX)       return json({ error: 'text' }, 400, cors);
   if (captcha !== CAPTCHA_CODE)              return json({ error: 'captcha' }, 400, cors);

@@ -44,9 +44,6 @@
                 // Group title
                 section.innerHTML += `
                     <h3 class="news-group-title">
-                        <a href="${group.titleUrl}">
-                        <img src="${group.icon}" alt="*" />
-                        </a>
                         <a href="${group.titleUrl}" class="underlined">${group.title}</a>
                     </h3>
             `;
@@ -79,10 +76,9 @@
             {
                 title: "Категория",
                 titleUrl: "news/cat.html",
-                icon: "/img/bullet_4.gif",
                 items: [
                     {
-                        date: "25 май 25",
+                        date: "25 Май 25",
                         title: 'Новина',
                         url: "news/news.html"
                     }

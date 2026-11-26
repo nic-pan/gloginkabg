@@ -72,3 +72,96 @@
     /* color: #0000cc; */
     font-family: Verdana, sans-serif;
 }
+/* ---------- dir.bg news colors (.group_tit, .loop_coll, .date, .tit_1, .tit_2, .txt) ---------- */
+.news-group-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.news-group-title a {
+    color: var(--newsGroupTitle, var(--entryTitle, var(--primary)));
+}
+
+/* The theme bullet replaces the old bullet_4.gif. */
+.news-group-title::before {
+    content: var(--listBullet, "•");
+    font-size: var(--listBulletSize, 8px);
+    color: var(--navBullet, var(--newsGroupTitle, var(--secondary)));
+}
+
+/* dir.bg colored the 1st, 3rd, 5th... row (.loop_coll). */
+.news-list li {
+    border-bottom: none;
+    padding: 5px 0;
+}
+
+.news-list li:nth-child(even) {
+    background: none;
+}
+
+.news-list li:nth-child(odd) {
+    background: var(--newsRowBG, transparent);
+}
+
+.news-date {
+    width: 70px;
+    flex-shrink: 0;
+    font-size: 9px;
+    color: var(--dateColor, var(--timestamp, var(--secondary)));
+}
+
+.news-list a {
+    font-size: 11px;
+    font-weight: normal;
+    color: var(--newsLink, var(--linkColor, var(--secondary)));
+}
+
+.news-divider {
+    width: 95%;
+    margin: 1rem auto;
+}
+
+/* News item page */
+main.news .info {
+    width: 95%;
+    margin: 15px auto 0;
+}
+
+main.news .info .date {
+    font-size: 9px;
+    color: var(--dateColor, var(--timestamp, var(--secondary)));
+}
+
+.news-item-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 0;
+    color: var(--newsTitle, var(--entryTitle, var(--primary)));
+}
+
+main.news .content {
+    width: 95%;
+    margin: 5px auto;
+    font-size: 11px;
+    color: var(--newsText, var(--primary));
+}
+
+/* News item comments: dir.bg put a plain line, then the framed comment box. */
+.news-comments-divider {
+    width: 95%;
+    margin: 15px auto;
+}
+
+main.news section.comments {
+    max-width: none;
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px;
+    border: var(--commentBoxBorder, 1px solid var(--secondary));
+    background: var(--commentBoxBG, transparent);
+}
+
+main.news .commentContent {
+    width: auto;
+    flex: 1;
+}

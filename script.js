@@ -272,6 +272,9 @@ async function renderVisitCounter() {
 }
 
 // Comments. A <section class="comments" data-comments="diary"> gets the list.
+// Each post needs its own name, or two posts share one comment list:
+// "diary" and "library" are the first posts; next come "diary-2", "news-1" etc.
+// The home page preview uses the same name as the entry it shows.
 // Optional data-comments-limit="3" shows only the newest comments.
 // A <form data-comments-form="diary"> posts new comments.
 const COMMENT_ERRORS = {
