@@ -27,6 +27,15 @@
   
     "candy": {
       "colors": {
+        "--calendarWeekdayColor": "#FFFFFF",
+        "--calendarWeekdayBG": "#9E2778",
+        "--widgetTitle": "#D7EAFA",
+        "--calendarText": "#FFFFFF",
+        "--calendarBorder": "#FFFFCC",
+        "--gloginLink": "#FFFFFF",
+        "--gloginBorder": "#FFFFB7",
+        "--gloginBullet": "#FFFF06",
+        "--gloginTitle": "#FFFF00",
         "--prebarBG": "#DD77BB",
         "--prebarText": "#ffffff",
         "--prebarBorder": "2px solid #803B71",
@@ -66,13 +75,22 @@
         "icon": "🍭"
       },
       "footer": {
-        "background": "#BB2F8D",
+        "background": "#C639A6",
         "color": "#FFFF00"
       }
     },
 
     "garden": {
       "colors": {
+        "--gloginLink": "#66952D",
+        "--gloginBullet": "#D98ADB",
+        "--gloginTitle": "#D98ADB",
+        "--gloginBorder": "#C9E370",
+        "--topbarLink": "#84BF3C",
+        "--headerBorderTop": "none",
+        "--prebarBorder": "2px solid #FFFF99",
+        "--prebarText": "#ffffff",
+        "--prebarBG": "#6B9C30",
         "--bg": "#85C13C",
         "--contentBG": "#fff",
         "--headerBG": "#f08cd0",
@@ -82,14 +100,14 @@
         "--accent2": "#F0F9E8",
         "--timestamp": "#66952D",
         "--navLink": "#FFF",
-        "--navBG": "#85C13C",
+        "--navBG": "#84BF3C",
         "--commenterBG": "#FFFDD7",
         "--comment": "#F0F9E8",
         "--commentText": "#A673BB",
         "--accentText": "#66952D",
         "--commenterText": "#A673BB",
         "--borderColor": "transparent",
-        "--navBorder": "#FFD700",
+        "--navBorder": "#C9E370",
         "--listBullet": "\"★\"",
         "--navBullet": "#FFD700",
         "--calendarText": "#A673BB",
@@ -97,9 +115,9 @@
         "--footerBorderTop": "1px solid #ffffff",
         "--footerFieldset": "#ffffff",
         "--calendarBorder": "#C9E370",
-        "--calendarCell": "#f08cd0",
+        "--calendarCell": "#D98ADB",
         "--calendarDate": "#316C75",
-        "--calendarWeekdayBG": "#f08cd0",
+        "--calendarWeekdayBG": "#D98ADB",
         "--calendarWeekdayColor": "#ffffff",
         "--accent": "#CDE7AD"
       },
@@ -123,11 +141,11 @@
     "skyBlue": {
       "colors": {
         "--calendarCellBG": "#ffffff",
-        "--gloginBG": "#6699CC",
-        "--gloginBorder": "#8AB4E6",
-        "--gloginTitle": "#99CC00",
+        "--gloginBG": "#6192C7",
+        "--gloginBorder": "#61A2E8",
+        "--gloginTitle": "#97CA03",
         "--gloginLink": "#ffffff",
-        "--gloginBullet": "#FF0000",
+        "--gloginBullet": "#DC1F29",
         "--prebarBG": "#006699",
         "--prebarText": "#ffffff",
         "--prebarBorder": "2px solid #FFFFFF",
@@ -182,6 +200,7 @@
 
     "bloodOrange": {
       "colors": {
+        "--gloginBullet": "#FFFF06",
         "--bg": "#339900",
         "--contentBG": "#FDF1E3",
         "--primary": "#000000",
@@ -198,10 +217,10 @@
         "--topbarLink": "#ffffff",
         "--prebarBG": "#DF3A0B",
         "--prebarText": "#ffffff",
-        "--prebarBorder": "3px solid #3C5A12",
+        "--prebarBorder": "2px solid #3C5A12",
         "--headerBorderTop": "none",
         "--sectionHeaderBorderBottom": "1px solid #3C5A12",
-        "--calendarBorder": "#ffffff",
+        "--calendarBorder": "#FFFFCC",
         "--calendarSectionBG": "#FFC42C",
         "--calendarText": "#FFFF00",
         "--calendarWeekdayBG": "#F79B2C",
@@ -219,7 +238,7 @@
         "--commentsLinkColor": "#DF3A0B",
         "--timestamp": "#DF3A0B",
         "--accentText": "#ffffff",
-        "--gloginBorder": "#ffffff",
+        "--gloginBorder": "#FFFFB7",
         "--gloginTitle": "#FFFF00",
         "--footerDisclaimer": "#FFCB42",
         "--footerBorderTop": "1px solid #FFCB42",
@@ -246,6 +265,10 @@
 
     "purpleDream": {
       "colors": {
+        "--headerBorderTop": "none",
+        "--prebarBorder": "3px solid #E6DEF5",
+        "--prebarText": "#ffffff",
+        "--prebarBG": "#363256",
         "--bg": "#59518C",
         "--contentBG": "#F9F4FD",
         "--primary": "#663399",
@@ -297,6 +320,15 @@
   
     "bordeaux": {
       "colors": {
+        "--gloginBullet": "#CC0000",
+        "--gloginLink": "#777777",
+        "--gloginTitle": "#CC0000",
+        "--gloginBorder": "#777777",
+        "--gloginBG": "#FFFFFF",
+        "--headerBorderTop": "none",
+        "--prebarBorder": "1px solid #FFFFFF",
+        "--prebarText": "#ffffff",
+        "--prebarBG": "#333333",
         "--bg": "#937915",
         "--contentBG": "#f8f8e8",
         "--primary": "#666666",
@@ -308,7 +340,6 @@
         "--commenterBG": "#FFFFCC",
         "--comment": "#FFFFEA",
         "--commentText": "#666",
-        "border": "dashed 1px #999999",
         "--accentText": "#4F0100",
         "--borderColor": "transparent",
         "--listBullet": "\"○\"",
@@ -351,6 +382,12 @@
 
     "night": {
       "colors": {
+        "--calendarWeekdayColor": "#FFFFFF",
+        "--gloginBullet": "#DC1F29",
+        "--gloginLink": "#777777",
+        "--gloginTitle": "#CC0000",
+        "--gloginBorder": "#666666",
+        "--gloginBG": "#000000",
         "--prebarBG": "#333333",
         "--prebarText": "#ffffff",
         "--prebarBorder": "2px solid #cccccc",
@@ -362,7 +399,7 @@
         "--secondary": "#555555",
         "--linkColor": "#5577cc",
         "--navBullet": "red",
-        "--widgetTitle": "red",
+        "--widgetTitle": "#CC0000",
         "--topbarLink": "#777777",
         "--accent": "#111",
         "--accent2": "#111",
@@ -381,7 +418,7 @@
         "--entryTitle": "#ffffff",
         "--calendarCell": "#555",
         "--calendarDate": "#cccccc",
-        "--calendarWeekdayBG": "#222"
+        "--calendarWeekdayBG": "#C7C7C7"
       },
       "header": {
         "backgroundType": "solid",
@@ -402,6 +439,27 @@
   
     "leaf": {
       "colors": {
+        "--comment": "#EFF4F2",
+        "--commenterBG": "#FFFFCC",
+        "--timestamp": "#A90000",
+        "--calendarWeekdayColor": "#ffffff",
+        "--calendarWeekdayBG": "#002919",
+        "--calendarText": "#002919",
+        "--widgetTitle": "#7B2008",
+        "--calendarBorder": "#4A4475",
+        "--calendarSectionBG": "#FDFBBF",
+        "--gloginLink": "#002919",
+        "--gloginBullet": "#DC1F29",
+        "--gloginTitle": "#7B2008",
+        "--gloginBorder": "#4A4475",
+        "--gloginBG": "#FDFBBF",
+        "--topbarLink": "#A90000",
+        "--navBorderStyle": "dotted",
+        "--navBorder": "#1F8450",
+        "--headerBorderTop": "none",
+        "--prebarBorder": "2px solid #E6DEF5",
+        "--prebarText": "#ffffff",
+        "--prebarBG": "#004227",
         "--bg": "#A2BFB4",
         "--contentBG": "#fff",
         "--primary": "#002919",
@@ -420,7 +478,7 @@
       },
       "sectionHeader": {
         "color": "#fff",
-        "background": "#009157",
+        "background": "#002919",
         "icon": "🍃"
       },
       "footer": {

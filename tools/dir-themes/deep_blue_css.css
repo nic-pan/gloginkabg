@@ -1,0 +1,360 @@
+body {margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px; background-color:#181C25;}
+
+hr {color:#535972; width:95%; border:solid dashed; height:1px;}
+
+.txt {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+
+.header_title {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 21px;color: #FFFFFF;text-decoration: none; font-weight:bold;}
+.header_title A:link {color: #FFFFFF;text-decoration: none;}
+.header_title A:visited {color: #FFFFFF;text-decoration: none;}
+.header_title A:hover {color: #FFFFFF;text-decoration: underline;} 
+
+.next_prev {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.next_prev A:link {color: #95B4CC;text-decoration: underline;}
+.next_prev A:visited {color: #95B4CC;text-decoration: underline;}
+.next_prev A:hover {color: #95B4CC;text-decoration: none;}
+
+.header_t1 {background-color: #000000; border-bottom:solid 1px #FFFFFF; border-top:solid 1px #FFFFFF; height:35px;}
+
+.left_m_bgr {background-color: #404A64;}
+
+.header_11 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;text-decoration: none;}
+.header_11 A:link {color: #FFFFFF;text-decoration: underline;}
+.header_11 A:visited {color: #FFFFFF;text-decoration: underline;}
+.header_11 A:hover {color: #FFFFFF;text-decoration: none;}
+
+.left_nav_dev { background: #404A64;}
+
+.left_nav {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;border-bottom:dotted 1px #FFFFFF;height: 19px; font-weight:bold;}
+.left_nav A:link {color: #95B4CC;text-decoration: none;}
+.left_nav A:visited {color: #95B4CC;text-decoration: none;}
+.left_nav A:hover {color: #95B4CC;text-decoration: underline;}
+
+.gloginki {	font-family: Verdana, Arial, Helvetica, sans-serif;border:solid 1px #666666;background-color: #181C25;font-size: 10px;color: #95B4CC;	text-decoration: none;}
+.gloginki A:link {color: #95B4CC;text-decoration: none;}
+.gloginki A:visited {color: #95B4CC;text-decoration: none;}
+.gloginki A:hover {color: #95B4CC;text-decoration: underline;}
+
+.gloginki_bull {color:#FFFFFF;}
+
+.gloginki_tit {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #535972;text-decoration: none; font-weight:bold;}
+
+.gloginki_more {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;color: #535972;text-decoration: none; font-weight:bold;}
+.gloginki_more A:link {color: #535972;text-decoration: underline;}
+.gloginki_more A:visited {color: #535972;text-decoration: underline;}
+.gloginki_more A:hover {color: #535972;text-decoration: none;}
+
+.body_color {background-color: #181C25; border-right:solid 1px #404A64;}
+
+.horz_nav {color: #95B4CC;text-decoration: none;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px; font-weight:bold;}
+.horz_nav A:link {color: #95B4CC;text-decoration: none;}
+.horz_nav A:visited {color: #95B4CC;text-decoration: none;}
+.horz_nav A:hover {color: #95B4CC;text-decoration: underline;}
+
+.center_fash {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 13px;font-weight: bold;color: #FFFFFF;text-decoration: none;}
+.center_fash A:link {color: #FFFFFF;text-decoration: underline;}
+.center_fash A:visited {color: #FFFFFF;text-decoration: underline;}
+.center_fash A:hover {color: #FFFFFF;text-decoration: none;}
+
+.date {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 9px;color: #535972;text-decoration: none; font-weight:bold;}
+
+.tit_1 {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight: bold;color: #535972;text-decoration: none;}
+.tit_1 A:link {color: #535972;text-decoration: underline;}
+.tit_1 A:visited {color: #535972;text-decoration: underline;}
+.tit_1 A:hover {color: #535972;text-decoration: none;}
+
+.tit_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.tit_2 A:link {color: #95B4CC;text-decoration: underline;}
+.tit_2 A:visited {color: #95B4CC;text-decoration: underline;}
+.tit_2 A:hover {color: #95B4CC;text-decoration: none;}
+
+.loop_coll {}
+
+.group_tit {font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #535972;text-decoration: none;font-weight:bold;}
+.group_tit A:link {color: #535972;text-decoration: underline;}
+.group_tit A:visited {color: #535972;text-decoration: underline;}
+.group_tit A:hover {color: #535972;text-decoration: none;}
+
+.lang {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;color: #FFFFFF;text-decoration: none;}
+.lang A:link {color: #FFFFFF;text-decoration: underline;}
+.lang A:visited {color: #FFFFFF;text-decoration: underline;}
+.lang A:hover {color: #FFFFFF;text-decoration: none;}
+
+.footer_table {border-bottom:solid 1px #656565; background:#404A64; border-right:solid 1px dashed #000000;}
+
+.footer_1 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;text-decoration: none;}
+
+.footer_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;color: #FFFFFF;text-decoration: none;}
+
+.comment_tbl { border:dashed 1px #404A64;}
+
+.comment_td_1 { background:#404A64; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;text-decoration: none; border:solid 1px #000000;}
+
+.comment_td_2 { background:#181C25; border:solid 1px #404A64;}
+
+.comment_1 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 13px;font-weight: bold;color: #FFFFFF;text-decoration: none;}
+
+.comment_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.comment_2 A:link {color: #95B4CC;text-decoration: underline;}
+.comment_2 A:visited {color: #95B4CC;text-decoration: underline;}
+.comment_2 A:hover {color: #95B4CC;text-decoration: none;}
+
+.comment_3 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;color: #535972;text-decoration: none; font-weight:bold;}
+
+.formi {border: 1px solid #000000;background-color:#404A64;color:#FFFFFF;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px; font-weight:bold;}
+
+.dairy_fash {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;font-weight: bold;color: #000000;text-decoration: none; background:#E1E1E1;}
+
+.dairy_loop {background-color: #F5F5F5;}
+
+.dairy_1 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #000000;text-decoration: none;}
+.dairy_1 A:link {color: #000000;text-decoration: underline;font-size: 9px;}
+.dairy_1 A:visited {color: #000000;text-decoration: underline;font-size: 9px;}
+.dairy_1 A:hover {color: #000000;text-decoration: none;font-size: 9px;}
+
+.dairy_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #FFFFFF;text-decoration: none; font-weight:bold;}
+
+.dairy_3 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;text-decoration: none;}
+
+.poll {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+
+.gallery_1 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+
+.gallery_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.gallery_2 A:link {color: #95B4CC;text-decoration: none;}
+.gallery_2 A:visited {color: #95B4CC;text-decoration: none;}
+.gallery_2 A:hover {color: #95B4CC;text-decoration: underline;}
+
+.snimka_tbl {}
+
+.snimka_1 {font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #535972;text-decoration: none; font-weight:bold;}
+
+.snimka_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+
+.forum_1 {background-color: #404A64; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none; font-weight:bold;}
+
+.forum_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+
+.forum_3 {font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #535972;text-decoration: none; font-weight:bold;}
+.forum_3 A:link {color: #535972;text-decoration: underline;}
+.forum_3 A:visited {color: #535972;text-decoration: underline;}
+.forum_3 A:hover {color: #535972;text-decoration: none;}
+
+.forum_4 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.forum_4 A:link {color: #95B4CC;text-decoration: underline;}
+.forum_4 A:visited {color: #95B4CC;text-decoration: underline;}
+.forum_4 A:hover {color: #95B4CC;text-decoration: none;}
+
+.forum_5 {background-color: #404A64; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;text-decoration: none;}
+.forum_5 A:link {color: #FFFFFF;text-decoration: underline;}
+.forum_5 A:visited {color: #FFFFFF;text-decoration: underline;}
+.forum_5 A:hover {color: #FFFFFF;text-decoration: none;}
+
+.forum_6 {font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #535972;text-decoration: none;}
+
+.catalog_td {background:#181C25; border:solid 1px #404A64;}
+
+.catalog_1 {font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #535972;text-decoration: none; font-weight:bold;}
+.catalog_1 A:link {color: #535972;text-decoration: underline;}
+.catalog_1 A:visited {color: #535972;text-decoration: underline;}
+.catalog_1 A:hover {color: #535972;text-decoration: none;}
+
+.catalog_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 9px;color: #535972; font-weight:bold;}
+
+.catalog_3 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+
+.files_1 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #535972;text-decoration: none;}
+.files_1 A:link {color: #95B4CC;text-decoration: underline;font-family: Arial, Helvetica, sans-serif;font-size: 12px;}
+.files_1 A:visited {color: #95B4CC;text-decoration: underline;font-family: Arial, Helvetica, sans-serif;font-size: 12px;}
+.files_1 A:hover {color: #95B4CC;text-decoration: none;font-family: Arial, Helvetica, sans-serif;font-size: 12px;}
+
+.files_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+
+.list_1 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.list_1 A:link {color: #95B4CC;text-decoration: underline;}
+.list_1 A:visited {color: #95B4CC;text-decoration: underline;}
+.list_1 A:hover {color: #95B4CC;text-decoration: none;}
+
+.list_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #95B4CC;text-decoration: none; font-weight:bold;}
+
+.links_1 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none; padding-bottom:4px;}
+.links_1 A:link {color: #95B4CC;text-decoration: underline;}
+.links_1 A:visited {color: #95B4CC;text-decoration: underline;}
+.links_1 A:hover {color: #95B4CC;text-decoration: none;}
+
+.links_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 9px;color: #535972;text-decoration: none; font-weight:bold;}
+.links_2 A:link {color: #535972;text-decoration: none;}
+.links_2 A:visited {color: #535972;text-decoration: none;}
+.links_2 A:hover {color: #535972;text-decoration: underline;}
+
+.calendar_fash {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;font-weight: bold;color: #FFFFFF;text-decoration: none; background:#404A64;}
+
+.calendar_loop {background-color: #404A64;}
+
+.calendar_1 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;text-decoration: none;}
+.calendar_1 A:link {color: #95B4CC;text-decoration: underline;font-size: 11px;}
+.calendar_1 A:visited {color: #95B4CC;text-decoration: underline;font-size: 11px;}
+.calendar_1 A:hover {color: #95B4CC;text-decoration: none;font-size: 11px;}
+
+.calendar_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;font-weight: bold;color: #FFFFFF;text-decoration: none;}
+
+.address_1 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;font-weight: bold;color: #95B4CC;}
+.address_1 A:link {color: #95B4CC;text-decoration: underline;}
+.address_1 A:visited {color: #95B4CC;text-decoration: underline;}
+.address_1 A:hover {color: #95B4CC;text-decoration: none;}
+
+.address_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.address_2 A:link {color: #95B4CC;text-decoration: none;}
+.address_2 A:visited {color: #95B4CC;text-decoration: none;}
+.address_2 A:hover {color: #95B4CC;text-decoration: underline;}
+
+.address_3 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 9px;color: #535972;text-decoration: none; font-weight:bold;}
+.address_3 A:link {color: #535972;text-decoration: underline;}
+.address_3 A:visited {color: #535972;text-decoration: underline;}
+.address_3 A:hover {color: #535972;text-decoration: none;}
+
+.cal {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;color: #FFFFFF;text-decoration: none; padding:2 2 2 2;}
+.cal A:link {color: #FFFFFF;text-decoration: none;}
+.cal A:visited {color: #FFFFFF;text-decoration: none;}
+.cal A:hover {color: #FFFFFF;text-decoration: underline;}
+
+.fashtit {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;font-weight: bold;}
+.fashtit A:link {color: #95B4CC;text-decoration: none;}
+.fashtit A:visited {color: #95B4CC;text-decoration: none;}
+.fashtit A:hover {color: #95B4CC;text-decoration: underline;}
+
+.arrow {font-family: Arial, Helvetica, sans-serif;font-size: 14px;color: #95B4CC;text-decoration: none;font-weight: bold;}
+.arrow A:link {color: #95B4CC;text-decoration: underline;}
+.arrow A:visited {color: #95B4CC;text-decoration: underline;}
+.arrow A:hover {color: #95B4CC;text-decoration: none;}
+
+.blog_arch_tb {border:solid 1px #4A4475;}
+
+.blog_1 {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight: bold;color: #95B4CC;text-decoration: none;}
+.blog_1 A:link {color: #95B4CC;text-decoration: none;}
+.blog_1 A:visited {color: #95B4CC;text-decoration: none;}
+.blog_1 A:hover {color: #95B4CC;text-decoration: underline;}
+
+.blog_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.blog_2 A:link {color: #95B4CC;text-decoration: underline;}
+.blog_2 A:visited {color: #95B4CC;text-decoration: underline;}
+.blog_2 A:hover {color: #95B4CC;text-decoration: none;}
+
+.blog_3 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #D7EAFA;	text-decoration: none;}
+.blog_3 A:link {color: #D7EAFA;text-decoration: none;}
+.blog_3 A:visited {color: #D7EAFA;text-decoration: none;}
+.blog_3 A:hover {color: #D7EAFA;text-decoration: underline;}
+
+.cal_tb {background-color: #000000;}
+
+.mini_galeri_tb {border:solid 1px #4A4475;background-color: #FDFBBF;}
+
+.mini_galeri_1 {font-family: Arial, Helvetica, sans-serif;font-size: 11px;color: #A90000;text-decoration: none;font-weight: bold;}
+
+.mp3_tit {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #525872;text-decoration: none; font-weight:bold;}
+
+.mp3_plist {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #525872;text-decoration: none;}
+
+.mp3 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none; font-weight:bold;}
+.mp3 A:link {color: #95B4CC;text-decoration: underline;}
+.mp3 A:visited {color: #95B4CC;text-decoration: underline;}
+.mp3 A:hover {color: #95B4CC;text-decoration: none;}
+
+.mod_fash {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 14px;color: #FFFFFF;text-decoration: none; font-weight:bold; border:solid 1px #404A64;background-color: #404A64;}
+.mod_fash A:link {color: #FFFFFF;text-decoration: none;}
+.mod_fash A:visited {color: #FFFFFF;text-decoration: none;}
+.mod_fash A:hover {color: #FFFFFF;text-decoration: underline;}
+
+.mod_main {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none; border-left:solid 1px #404A64; border-right:solid 1px #404A64; border-bottom:solid 1px #404A64;}
+.mod_main A:link {color: #95B4CC;text-decoration: none;}
+.mod_main A:visited {color: #95B4CC;text-decoration: none;}
+.mod_main A:hover {color: #95B4CC;text-decoration: underline;}
+
+.mod_main_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;text-decoration: none; border:solid 1px #FFFFFF; background-color: #FFFFFF;}
+.mod_main_2 A:link {color: #FFFFFF;text-decoration: none;}
+.mod_main_2 A:visited {color: #FFFFFF;text-decoration: none;}
+.mod_main_2 A:hover {color: #FFFFFF;text-decoration: underline;}
+
+.mod_main_3 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none; border-left:solid 1px #404A64; border-right:solid 1px #404A64; border-bottom:solid 1px #404A64;}
+.mod_main_3 A:link {color: #95B4CC;text-decoration: none;}
+.mod_main_3 A:visited {color: #95B4CC;text-decoration: none;}
+.mod_main_3 A:hover {color: #95B4CC;text-decoration: underline;}
+
+.mod_center_tb {border-left:solid 1px #404A64; border-right:solid 1px #404A64; border-bottom:solid 1px #404A64; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.mod_center_tb A:link {color: #95B4CC;text-decoration: none;}
+.mod_center_tb A:visited {color: #95B4CC;text-decoration: none;}
+.mod_center_tb A:hover {color: #95B4CC;text-decoration: underline;} 
+
+.mod_center_tb_2 {border-left:solid 1px #404A64; border-right:solid 1px #404A64; border-bottom:solid 1px #404A64; font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.mod_center_tb_2 A:link {color: #95B4CC;text-decoration: none;}
+.mod_center_tb_2 A:visited {color: #95B4CC;text-decoration: none;}
+.mod_center_tb_2 A:hover {color: #95B4CC;text-decoration: underline;} 
+
+.mod_center_loop {background-color: #FFE8E8;}
+
+.mod_date {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #0066CC;text-decoration: none;} 
+
+.mod_catalog {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #FFFFFF;text-decoration: none; line-height:140%;}
+.mod_catalog A:link {color: #FFFFFF;text-decoration: none;}
+.mod_catalog A:visited {color: #FFFFFF;text-decoration: none;}
+.mod_catalog A:hover {color: #FFFFFF;text-decoration: underline;}
+
+.mod_catalog_2 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;text-decoration: none;font-weight:bold;}
+.mod_catalog_2 A:link {color: #FFFFFF;text-decoration: underline;}
+.mod_catalog_2 A:visited {color: #FFFFFF;text-decoration: underline;}
+.mod_catalog_2 A:hover {color: #FFFFFF;text-decoration: none;}
+
+.mod_catalog_3 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #FFFFFF;text-decoration: none; line-height:140%;}
+.mod_catalog_3 A:link {color: #FFFFFF;text-decoration: underline;}
+.mod_catalog_3 A:visited {color: #FFFFFF;text-decoration: underline;}
+.mod_catalog_3 A:hover {color: #FFFFFF;text-decoration: none;}
+
+.mod_catalog_4 {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #17314D;text-decoration: none;font-weight:bold;}
+.mod_catalog_4 A:link {color: #17314D;text-decoration: underline;}
+.mod_catalog_4 A:visited {color: #17314D;text-decoration: underline;}
+.mod_catalog_4 A:hover {color: #17314D;text-decoration: none;}
+
+.mod_butts {border: 1px solid #000000;background-color:#404A64;color:#FFFFFF;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px; font-weight:bold;}
+
+.mod_anketa {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+
+.mod_curency {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;text-decoration: none; border-right:solid 1px #FFFFFF; border-left:solid 1px #FFFFFF; border-bottom:solid 1px #FFFFFF; background-color: #FFFFFF;}
+.mod_curency A:link {color: #FFFFFF;text-decoration: underline;}
+.mod_curency A:visited {color: #FFFFFF;text-decoration: underline;}
+.mod_curency A:hover {color: #FFFFFF;text-decoration: none;}
+
+.mod_vreme {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #FFFFFF;text-decoration: none;}
+.mod_vreme A:link {color: #FFFFFF;text-decoration: none;}
+.mod_vreme A:visited {color: #FFFFFF;text-decoration: none;}
+.mod_vreme A:hover {color: #FFFFFF;text-decoration: underline;}
+
+.mod_vreme_cold {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.mod_vreme_cold A:link {color: #95B4CC;text-decoration: none;}
+.mod_vreme_cold A:visited {color: #95B4CC;text-decoration: none;}
+.mod_vreme_cold A:hover {color: #95B4CC;text-decoration: underline;}
+
+.mod_vreme_hot {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none;}
+.mod_vreme_hot A:link {color: #95B4CC;text-decoration: none;}
+.mod_vreme_hot A:visited {color: #95B4CC;text-decoration: none;}
+.mod_vreme_hot A:hover {color: #95B4CC;text-decoration: underline;}
+
+.mod_vreme_link {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 10px;color: #FFFFFF;text-decoration: none;}
+.mod_vreme_link A:link {color: #FFFFFF;text-decoration: none;}
+.mod_vreme_link A:visited {color: #FFFFFF;text-decoration: none;}
+.mod_vreme_link A:hover {color: #FFFFFF;text-decoration: underline;}
+
+.mod_vreme_tit {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #FFFFFF;text-decoration: none;}
+.mod_vreme_tit A:link {color: #FFFFFF;text-decoration: none;}
+.mod_vreme_tit A:visited {color: #FFFFFF;text-decoration: none;}
+.mod_vreme_tit A:hover {color: #FFFFFF;text-decoration: underline;}
+
+.txtlmenu {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;color: #95B4CC;text-decoration: none; font-weight:bold;}
+
+.cards_tbl_1 {border:solid 1px #999999; background-color:#FFFFFF;}
+.cards_tbl_2 {border-right:solid 1px #4B4B4B;}
+.cards_formi {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#000000;}
+.cards_butt_1 {font-family: Verdana, Arial, Helvetica, sans-serif; border:solid 1px #3F4963; background-color:#3F4963; color:#FFFFFF; font-size:10px; font-weight:bold; height:20px; cursor:hand;}
+.cards_txt_1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#000000;}
+.cards_txt_2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#95B4CC;}
+.cards_txt_3 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#95B4CC;}
+.cards_txt_4 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#95B4CC;}
