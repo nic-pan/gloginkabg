@@ -367,11 +367,12 @@ nav#additional {
 #calendar-main thead tr.month th {
   padding: 4px 0;
   text-transform: lowercase;
-  color: var(--calendarMonthColor, var(--calendarText, var(--navLink)));
+  /* The page calendar sits on the content background, not on the widget box. */
+  color: var(--calendarPageMonth, var(--calendarMonthColor, var(--calendarText, var(--navLink))));
 }
 
 #calendar-main thead tr.month th button {
-  color: var(--calendarMonthColor, var(--calendarText, var(--primary)));
+  color: var(--calendarPageMonth, var(--calendarMonthColor, var(--calendarText, var(--primary))));
 }
 
 footer .visit-stats {
