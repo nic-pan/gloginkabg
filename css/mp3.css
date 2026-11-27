@@ -228,6 +228,11 @@
   font-size: 12px;
 }
 
+.spotify-link a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 /* Comments under the player: the same framed box as the diary (dir.bg .comment_tbl). */
 main.mp3-page section.comments {
     max-width: none;

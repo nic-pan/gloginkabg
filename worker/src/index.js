@@ -12,12 +12,15 @@ const TEXT_MAX = 2000;
 const RATE_LIMIT_COUNT = 3;          // comments...
 const RATE_LIMIT_MINUTES = 10;       // ...in this many minutes, for each visitor
 const TIME_ZONE = 'Europe/Sofia';
+// The local preview opened from another computer at home, for example
+// http://192.168.1.8:3100. Only home-network addresses on port 3100 match.
+const LAN_PREVIEW = /^http:\/\/(192\.168\.\d{1,3}\.\d{1,3}|10\.\d{1,3}\.\d{1,3}\.\d{1,3}):3100$/;
 
 export default {
   async fetch(request, env) {
     const origin = request.headers.get('Origin') || '';
     const allowed = env.ALLOWED_ORIGINS.split(',').map(s => s.trim());
-    const cors = allowed.includes(origin)
+    const cors = (allowed.includes(origin) || LAN_PREVIEW.test(origin))
       ? { 'Access-Control-Allow-Origin': origin, 'Vary': 'Origin' }
       : {};
 
