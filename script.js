@@ -125,6 +125,7 @@ function renderNavigation() {
     { name: "Музика", url: "mp3" },
     { name: "Файлове", url: "files" },
     { name: "Новини", url: "news" },
+    { name: "Картички", url: "greetings" },
     { name: "Глогинки", url: "members" },
     { name: "Минута мълчание ;(", url: "silence" },
     { name: "Календар", url: "calendar" },

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Последната глогинка - Картички</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/greetings.css" />
+    <script src="script.js"></script>
+    <script src="greetings/greetings-data.js"></script>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+        <div class="container">
+            <include-html src="/layout/sidebar.html"></include-html>
+
+            <main class="bordered">
+                <include-html src="/layout/topbar.html"></include-html>
+                <div class="sectionHeader">
+                    <span class="headerImg"></span>
+                    <h2>Картички</h2>
+                </div>
+                <div class="cards-grid" id="cards"></div>
+            </main>
+        </div>
+        <include-html src="/layout/footer.html"></include-html>
+    </div>
+    <include-html src="/layout/adbox.html"></include-html>
+
+    <script>
+        // Like the dir.bg cards list: 90 x 90 cards with a thin black frame,
+        // the name under each card. Each card opens its own page.
+        const grid = document.getElementById('cards');
+        greetingCards.forEach((card, id) => {
+            const cell = document.createElement('div');
+            cell.className = 'card-cell';
+            const link = document.createElement('a');
+            link.href = `greetings/item.html?id=${id}`;
+            const img = document.createElement('img');
+            img.src = card.src;
+            img.alt = card.title;
+            link.append(img);
+            const name = document.createElement('a');
+            name.href = link.href;
+            name.className = 'card-name';
+            name.textContent = card.title;
+            cell.append(link, name);
+            grid.append(cell);
+        });
+    </script>
+</body>
+
+</html>

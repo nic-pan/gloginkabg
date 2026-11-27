@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Последната глогинка - Картички</title>
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="css/diary.css" />
+    <link rel="stylesheet" type="text/css" href="css/greetings.css" />
+    <script src="script.js"></script>
+    <script src="greetings/greetings-data.js"></script>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <include-html src="/layout/prebar.html"></include-html>
+    <include-html src="/layout/header.html"></include-html>
+        <div class="container">
+            <include-html src="/layout/sidebar.html"></include-html>
+
+            <main class="bordered">
+                <include-html src="/layout/topbar.html"></include-html>
+                <div class="sectionHeader">
+                    <span class="headerImg"></span>
+                    <h2>Картички</h2>
+                </div>
+                <div id="card-view"></div>
+            </main>
+        </div>
+        <include-html src="/layout/footer.html"></include-html>
+    </div>
+    <include-html src="/layout/adbox.html"></include-html>
+
+    <script>
+        // One card, like a dir.bg gallery photo page. "Сподели" makes a link that
+        // holds the card and the message in its address. Nothing is stored anywhere.
+        const params = new URLSearchParams(location.search);
+        const id = parseInt(params.get('id'), 10);
+        const card = greetingCards[id];
+        const view = document.getElementById('card-view');
+        const LIMITS = { from: 40, to: 40, msg: 300 };
+
+        function el(tag, className, text) {
+            const node = document.createElement(tag);
+            if (className) node.className = className;
+            if (text !== undefined) node.textContent = text;
+            return node;
+        }
+
+        if (!card) {
+            const p = el('p', 'card-missing', 'Картичката не е намерена. ');
+            const back = el('a', null, '« Картички');
+            back.href = 'greetings/';
+            p.append(back);
+            view.append(p);
+        } else {
+            // Nav row: "Картички" « Предишна  Следваща »
+            const nav = el('div', 'gallery-nav');
+            const home = el('a'); home.href = 'greetings/';
+            home.append(el('b', null, '"Картички"'));
+            nav.append(home);
+            if (id > 0) { const a = el('a', null, '« Предишна'); a.href = `greetings/item.html?id=${id - 1}`; nav.append(a); }
+            if (id < greetingCards.length - 1) { const a = el('a', null, 'Следваща »'); a.href = `greetings/item.html?id=${id + 1}`; nav.append(a); }
+            view.append(nav);
+
+            // The card
+            const box = el('div', 'gallery-full');
+            const full = el('a'); full.href = card.src; full.target = '_blank'; full.rel = 'noopener';
+            const img = el('img'); img.src = card.src; img.alt = card.title;
+            full.append(img);
+            box.append(full, el('p', 'gallery-photo-title', card.title));
+
+            // A received card: show the message from the link.
+            const from = (params.get('from') || '').slice(0, LIMITS.from);
+            const to = (params.get('to') || '').slice(0, LIMITS.to);
+            const msg = (params.get('msg') || '').slice(0, LIMITS.msg);
+            if (from || to || msg) {
+                const note = el('div', 'card-message');
+                if (to) note.append(el('p', 'card-to', `До: ${to}`));
+                if (msg) note.append(el('p', 'card-text', msg));
+                if (from) note.append(el('p', 'card-from', `От: ${from}`));
+                box.append(note);
+            }
+            view.append(box);
+
+            if (from || to || msg) {
+                const again = el('p', 'card-again');
+                const a = el('a', null, 'Изпрати и ти картичка'); a.href = 'greetings/';
+                again.append(a);
+                view.append(again);
+            }
+
+            // "Сподели": like the dir.bg "ВЗЕМИ" button (gray gradient, green tick).
+            const share = el('button', 'share-button');
+            share.type = 'button';
+            const tick = el('span', 'share-tick'); tick.setAttribute('aria-hidden', 'true');
+            share.append(tick, el('span', null, 'Сподели'));
+            const shareRow = el('div', 'share-row');
+            shareRow.append(share);
+            view.append(shareRow);
+
+            // The form opens under the button.
+            const form = el('form', 'share-form');
+            form.hidden = true;
+            const field = (label, name, max, multi) => {
+                const row = el('div', 'form-row');
+                const lab = el('label', null, label); lab.htmlFor = `card-${name}`;
+                const input = el(multi ? 'textarea' : 'input');
+                input.id = `card-${name}`; input.name = name; input.maxLength = max;
+                if (multi) input.rows = 4; else input.type = 'text';
+                row.append(lab, input);
+                return row;
+            };
+            form.append(field('До:', 'to', LIMITS.to), field('Съобщение:', 'msg', LIMITS.msg, true), field('От:', 'from', LIMITS.from));
+            const make = el('button', 'formi', 'СЪЗДАЙ ЛИНК'); make.type = 'submit';
+            const makeRow = el('div', 'form-row'); makeRow.append(el('span', 'form-spacer'), make);
+            form.append(makeRow);
+            const result = el('div', 'share-result'); result.hidden = true;
+            const out = el('input'); out.type = 'text'; out.readOnly = true;
+            const copy = el('button', 'formi', 'КОПИРАЙ'); copy.type = 'button';
+            const done = el('span', 'share-done');
+            result.append(el('p', null, 'Изпрати този линк на когото искаш:'), out, copy, done);
+            form.append(result);
+            view.append(form);
+
+            share.addEventListener('click', () => { form.hidden = !form.hidden; });
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const link = new URLSearchParams({ id: String(id) });
+                for (const name of ['to', 'msg', 'from']) {
+                    const value = form.elements[name].value.trim();
+                    if (value) link.set(name, value);
+                }
+                out.value = `${location.origin}/greetings/item.html?${link}`;
+                result.hidden = false;
+                done.textContent = '';
+                out.select();
+            });
+            copy.addEventListener('click', async () => {
+                try {
+                    await navigator.clipboard.writeText(out.value);
+                    done.textContent = 'Копирано!';
+                } catch {
+                    out.select();
+                    done.textContent = 'Копирай с Ctrl+C.';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
