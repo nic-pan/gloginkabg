@@ -29,12 +29,46 @@
 }
 
 /* The content area, not the sidebar: the sidebar link color can be white. */
-.members-list a,
-.members-join a {
+.members-list a {
     color: var(--membersLink, var(--linkColor, var(--secondary)));
 }
 
 .members-join {
-    padding: 0.5rem 1rem;
+    text-align: center;
+    padding: 1rem;
     font-size: 11px;
+}
+
+.members-join p {
+    margin: 0 0 8px;
+}
+
+/* dir.bg "НОВ ЧЛЕН": a wide button in the theme button colors (.formi),
+   bold white uppercase text. */
+.members-join-button {
+    /* The same size as the "Добави коментар" button (#addComment). */
+    display: inline-block;
+    box-sizing: border-box;
+    width: 142px;
+    height: 20px;
+    line-height: 18px;
+    padding: 0;
+    border: var(--buttonBorder, 1px solid #000000);
+    background-color: var(--buttonBG, var(--secondary));
+    color: var(--buttonText, #FFFFFF);
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.members-join-button:hover {
+    text-decoration: none;
+}
+
+/* Focus (keyboard or click): a black frame instead of an underline. */
+.members-join-button:focus {
+    outline: none;
+    border: 1px solid #000000;
 }

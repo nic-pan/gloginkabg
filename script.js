@@ -88,7 +88,7 @@ function applyTheme(themeVars) {
   }
 }
 
-// "AD" SETUP BEGIN
+// FILLER BOX ("Пълнеж") SETUP BEGIN. Not named "ad": ad blockers hide those.
 const gifList = [
   "https://dl.glitter-graphics.com/pub/543/543735ehvlz7xadn.gif",
   "https://dl.glitter-graphics.com/pub/984/984757z6pg4s804m.gif",
@@ -103,7 +103,7 @@ function getRandomGif() {
 
 function renderNavigation() {
 
-  const img = document.getElementById("ad-gif");
+  const img = document.getElementById("filler-gif");
   if (img) {
     img.src = getRandomGif();
     img.style.maxWidth = "100%";
@@ -111,7 +111,7 @@ function renderNavigation() {
 
   }
 
-  // "AD" SETUP END
+  // FILLER BOX SETUP END
 
   // NAVIGATION SETUP BEGIN
   const navItems = [
