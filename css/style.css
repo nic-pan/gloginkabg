@@ -503,3 +503,46 @@ a.underlined:hover {
   font-weight: bold;
   text-decoration: none;
 }
+/* Falling objects (see renderRain in script.js). They never block clicks. */
+#rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: 645;
+  pointer-events: none;
+  /* Cut off objects at the right edge, so they never add a sideways scrollbar. */
+  overflow-x: clip;
+}
+
+#rain marquee {
+  position: absolute;
+  pointer-events: none;
+}
+
+#rain-toggle::after {
+  content: " | ";
+  color: var(--topbarLink, var(--secondary));
+}
+
+/* Colored scrollbars, the early-2000s glog trick (then: IE "scrollbar-face-color").
+   Each theme sets --scrollThumb (the handle) and --scrollTrack (the rail).
+   scrollbar-color: Chrome, Edge, Firefox. ::-webkit-scrollbar: Safari. */
+html {
+  scrollbar-color: var(--scrollThumb, #999999) var(--scrollTrack, #eeeeee);
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollTrack, #eeeeee);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollThumb, #999999);
+  border: 3px solid var(--scrollTrack, #eeeeee);
+}

@@ -1,6 +1,8 @@
 {
     "white": {
       "colors": {
+        "--scrollThumb": "#3366cc",
+        "--scrollTrack": "#f0f0f0",
         "--membersLink": "#3366cc",
         "--buttonText": "#FFFFFF",
         "--buttonBorder": "1px solid #000000",
@@ -30,7 +32,15 @@
     },
   
     "candy": {
+      "rain": [
+        { "src": "https://dl5.glitter-graphics.net/pub/644/644195ea6e65f5i0.gif", "width": 25, "count": 4 },
+        { "src": "https://dl7.glitter-graphics.net/pub/536/536397dgj9ef6ron.gif", "width": 49, "count": 4 },
+        { "src": "https://dl9.glitter-graphics.net/pub/1506/1506189o8y9vd5zgw.gif", "width": 27, "count": 3 },
+        { "src": "assets/img/rain/heart-string.gif", "width": 13, "count": 4 }
+      ],
       "colors": {
+        "--scrollThumb": "#BB2F8D",
+        "--scrollTrack": "#F7D2EA",
         "--membersLink": "#A077A4",
         "--linksUrl": "#66CC33",
         "--linksTitle": "#D350A9",
@@ -108,7 +118,16 @@
     },
 
     "garden": {
+      "rain": [
+        { "src": "https://dl8.glitter-graphics.net/pub/657/657798w8kz7t9wah.gif", "width": 80, "count": 2 },
+        { "src": "https://dl8.glitter-graphics.net/pub/857/857648qvtgfdul1e.gif", "width": 146, "count": 1 },
+        { "src": "https://dl7.glitter-graphics.net/pub/967/967977eyyq78pmbq.gif", "width": 90, "count": 2 },
+        { "src": "https://dl7.glitter-graphics.net/pub/727/727057f5owblcuts.gif", "width": 50, "count": 4 },
+        { "src": "https://dl9.glitter-graphics.net/pub/1114/1114469o00kbqvngd.gif", "width": 33, "count": 3 }
+      ],
       "colors": {
+        "--scrollThumb": "#84BF3C",
+        "--scrollTrack": "#F0F9E8",
         "--membersLink": "#A673BB",
         "--linksUrl": "#84BF3C",
         "--linksTitle": "#A673BB",
@@ -189,7 +208,14 @@
     },
   
     "skyBlue": {
+      "rain": [
+        { "src": "https://dl7.glitter-graphics.net/pub/706/706287isbesoi4u7.gif", "width": 55, "count": 10 },
+        { "src": "https://dl9.glitter-graphics.net/pub/36/36369yc3p3sn991.gif", "width": 90, "count": 1 },
+        { "src": "https://dl3.glitter-graphics.net/pub/553/553523uwenffpwwn.gif", "width": 35, "count": 4 }
+      ],
       "colors": {
+        "--scrollThumb": "#3E76B1",
+        "--scrollTrack": "#D7EAFA",
         "--membersLink": "#3E76B1",
         "--linksUrl": "#3E76B1",
         "--linksTitle": "#3E76B1",
@@ -273,7 +299,16 @@
     },
 
     "bloodOrange": {
+      "rain": [
+        { "src": "https://dl4.glitter-graphics.net/pub/500/500824ms6eoy3c9b.gif", "width": 50, "count": 5 },
+        { "src": "https://dl6.glitter-graphics.net/pub/1056/1056206zagp69f3u5.gif", "width": 45, "count": 3 },
+        { "src": "https://dl4.glitter-graphics.net/pub/1344/1344824hhu4yjhtim.gif", "width": 104, "count": 2 },
+        { "src": "https://img.glittergfx.com/pixel/faces/7G8B-cool-shades.gif", "width": 64, "pixelated": true, "count": 3 },
+        { "src": "https://dl3.glitter-graphics.net/pub/276/276283oeknvz7m8i.gif", "width": 50, "count": 3 }
+      ],
       "colors": {
+        "--scrollThumb": "#DF3A0B",
+        "--scrollTrack": "#FBE2C4",
         "--membersLink": "#DF3A0B",
         "--linksUrl": "#339900",
         "--linksTitle": "#DF3A0B",
@@ -362,7 +397,14 @@
     },
 
     "purpleDream": {
+      "rain": [
+        { "src": "https://dl4.glitter-graphics.net/pub/652/652744j0t51i4pja.gif", "width": 90, "count": 3 },
+        { "src": "https://dl2.glitter-graphics.net/pub/2021/2021301z4drd30ypb.gif", "width": 87, "count": 3 },
+        { "src": "https://dl5.glitter-graphics.net/pub/2545/2545195do1n1fzbp5.gif", "width": 99, "count": 3 }
+      ],
       "colors": {
+        "--scrollThumb": "#59518C",
+        "--scrollTrack": "#EDE5F8",
         "--membersLink": "#59518C",
         "--linksUrl": "#59518C",
         "--linksTitle": "#D26CAC",
@@ -441,7 +483,15 @@
     },
   
     "bordeaux": {
+      "rain": [
+        { "src": "https://dl2.glitter-graphics.net/pub/1348/1348261c28ui8751e.gif", "width": 95, "count": 2 },
+        { "src": "https://dl8.glitter-graphics.net/pub/640/640388z3ew32jvqh.gif", "width": 17, "count": 5 },
+        { "src": "https://dl.glitter-graphics.com/pub/3460/3460396voqupcifbq.gif", "width": 100, "count": 2 },
+        { "src": "https://dl2.glitter-graphics.net/pub/1020/1020822k9uqh8vv3a.gif", "width": 90, "count": 3 }
+      ],
       "colors": {
+        "--scrollThumb": "#4F0100",
+        "--scrollTrack": "#EFDC92",
         "--membersLink": "#B13000",
         "--linksUrl": "#999999",
         "--linksTitle": "#B13000",
@@ -525,7 +575,15 @@
     },
 
     "night": {
+      "rain": [
+        { "src": "https://dl7.glitter-graphics.net/pub/250/250127vmofxv3biu.gif", "width": 39, "count": 1 },
+        { "src": "https://dl8.glitter-graphics.net/pub/1040/1040078pjtfxwjzwi.gif", "width": 50, "count": 3 },
+        { "src": "https://dl3.glitter-graphics.net/pub/318/318443wtkune2uer.gif", "width": 30, "count": 5 },
+        { "src": "https://dl10.glitter-graphics.net/pub/1348/1348270mdu0pswbj2.gif", "width": 79, "count": 2 }
+      ],
       "colors": {
+        "--scrollThumb": "#555555",
+        "--scrollTrack": "#111111",
         "--membersLink": "#CCCCCC",
         "--linksUrl": "#999999",
         "--linksTitle": "#CC0000",
@@ -606,7 +664,15 @@
     },
   
     "leaf": {
+      "rain": [
+        { "src": "https://dl5.glitter-graphics.net/pub/2704/2704345r5kdrxoqyq.gif", "width": 80, "count": 2 },
+        { "src": "https://dl6.glitter-graphics.net/pub/1058/1058376oucw2p7qvg.gif", "width": 15, "count": 5 },
+        { "src": "https://dl8.glitter-graphics.net/pub/622/622978qfb9750zuu.gif", "width": 80, "count": 1 },
+        { "src": "https://dl2.glitter-graphics.net/pub/1815/1815441wr40qz9a3j.gif", "width": 28, "count": 4 }
+      ],
       "colors": {
+        "--scrollThumb": "#002919",
+        "--scrollTrack": "#EFF4F2",
         "--membersLink": "#002919",
         "--linksUrl": "#002919",
         "--linksTitle": "#A90000",

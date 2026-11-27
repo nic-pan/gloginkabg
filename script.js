@@ -40,6 +40,70 @@ async function loadThemesAndApplySaved() {
   }
 }
 
+// ---------- Falling objects ("валеж") ----------
+// Like the glitter-graphics "Falling Objects" generator (2007): <marquee direction="down">
+// tags with a random left position, start, height and speed. They fall without end.
+// Only for themes with a "rain" list, on every page, and off by default.
+// The visitor's choice stays in their own browser (localStorage "glog-rain").
+
+const randomInt = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+let rainImages = null;
+
+function renderRain(images) {
+  rainImages = images && images.length ? images : null;
+  document.getElementById('rain')?.remove();
+  document.getElementById('rain-toggle')?.remove();
+  if (!rainImages) return;
+
+  const nav = document.querySelector('.topBar nav');
+  if (nav) {
+    const toggle = document.createElement('a');
+    toggle.id = 'rain-toggle';
+    toggle.href = '#';
+    toggle.setAttribute('role', 'button');
+    toggle.addEventListener('click', e => {
+      e.preventDefault();
+      localStorage.setItem('glog-rain', localStorage.getItem('glog-rain') === 'on' ? 'off' : 'on');
+      showRain();
+    });
+    nav.prepend(toggle);
+  }
+  showRain();
+}
+
+function showRain() {
+  const on = localStorage.getItem('glog-rain') === 'on';
+  const toggle = document.getElementById('rain-toggle');
+  if (toggle) toggle.textContent = on ? 'Спри валежа' : 'Пусни валеж';
+  document.getElementById('rain')?.remove();
+  if (!on || !rainImages) return;
+
+  const layer = document.createElement('div');
+  layer.id = 'rain';
+  layer.setAttribute('aria-hidden', 'true');
+  for (const image of rainImages) {
+    for (let i = 0; i < (image.count || 1); i++) {
+      const fall = document.createElement('marquee');
+      fall.setAttribute('direction', 'down');
+      fall.setAttribute('scrollamount', randomInt(1, 5));
+      fall.setAttribute('scrolldelay', randomInt(5, 46));
+      fall.style.left = `${randomInt(5, 93)}%`;
+      fall.style.top = `${randomInt(29, 161)}px`;
+      fall.style.height = `${randomInt(530, 660)}px`;
+      fall.style.width = `${image.width || 60}px`;
+      const img = document.createElement('img');
+      img.src = image.src;
+      img.alt = '';
+      // "width" can also shrink a big GIF; "pixelated" keeps pixel art crisp.
+      if (image.width) img.style.width = `${image.width}px`;
+      if (image.pixelated) img.style.imageRendering = 'pixelated';
+      fall.append(img);
+      layer.append(fall);
+    }
+  }
+  document.body.append(layer);
+}
+
 function applyTheme(themeVars) {
   const style = document.documentElement.style;
   const toRemove = [];
@@ -86,6 +150,8 @@ function applyTheme(themeVars) {
     footer.style.background = themeVars.footer.background;
     footer.style.color = themeVars.footer.color;
   }
+
+  renderRain(themeVars.rain);
 }
 
 // FILLER BOX ("Пълнеж") SETUP BEGIN. Not named "ad": ad blockers hide those.
@@ -120,7 +186,7 @@ function renderNavigation() {
     { name: "Библиотека", url: "library" },
     { name: "Галерия", url: "gallery" },
     { name: "Защо Глогинка?", url: "why" },
-    { name: "Моите линкове", url: "links" },
+    { name: "Линкове", url: "links" },
     { name: "Видеа", url: "video" },
     { name: "Музика", url: "mp3" },
     { name: "Файлове", url: "files" },
