@@ -324,60 +324,59 @@ nav#additional {
   font-weight: bold;
 }
 
+/* The calendar page shows the same box as the sidebar widget, centered
+   (dir.bg did the same). The widget rules below also style #calendar-main. */
+.calendar-page {
+  padding: 10px;
+}
+
+.calendar-page .calendar-section {
+  width: 240px;
+  margin: 0 auto;
+  padding-top: 6px;
+}
+
 #calendar-main {
-  display: flex;
-  justify-content: center;
-  font-size: 13px;
+  font-size: 11px;
   color: var(--calendarText, var(--navLink));
 }
 
 #calendar-main button {
-  padding: 2px 8px;
-  background: var(--calendarSectionBG, var(--accent));
-  border: 1px solid var(--calendarBorder, var(--calendarCell, var(--secondary)));
+  padding: 2px 6px;
+  background: none;
+  border: none;
   cursor: pointer;
   color: var(--calendarText, var(--primary));
-  font-weight: bold;
-  line-height: 1.4;
-}
-
-#calendar-main button:hover {
-  background: var(--calendarText, var(--primary));
-  color: var(--calendarSectionBG, var(--bg));
 }
 
 #calendar-main table {
   border-collapse: collapse;
+  width: 100%;
+}
+
+#calendar-main thead tr.month th {
+  text-transform: lowercase;
+  color: var(--calendarMonthColor, var(--calendarText, var(--navLink)));
+}
+
+#calendar-main thead tr.month th button {
+  color: var(--calendarMonthColor, var(--calendarText, var(--primary)));
 }
 
 #calendar-main table td {
   border: 1px solid var(--calendarCell, var(--secondary));
   background-color: var(--calendarCellBG, var(--contentBG, white));
   color: var(--calendarDate, var(--calendarCell, var(--secondary)));
-  padding: 4px 10px;
-  text-align: center;
 }
 
 #calendar-main thead tr.weekdays th {
   background-color: var(--calendarWeekdayBG, var(--secondary));
   color: var(--calendarWeekdayColor, var(--accentText));
-  padding: 4px 10px;
 }
 
 #calendar-main td.today {
   color: red;
   font-weight: bold;
-}
-
-#calendar-main thead tr.month th {
-  padding: 4px 0;
-  text-transform: lowercase;
-  /* The page calendar sits on the content background, not on the widget box. */
-  color: var(--calendarPageMonth, var(--calendarMonthColor, var(--calendarText, var(--navLink))));
-}
-
-#calendar-main thead tr.month th button {
-  color: var(--calendarPageMonth, var(--calendarMonthColor, var(--calendarText, var(--primary))));
 }
 
 footer .visit-stats {
